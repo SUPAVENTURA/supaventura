@@ -3,628 +3,463 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SupAventura Retreat – Santa Teresa, Costa Rica | December 2026</title>
-<meta name="description" content="7-day adventure retreat in Santa Teresa, Costa Rica. Surf, yoga, Isla Tortuga, waterfalls, cacao ceremony and community. December 5–12, 2026. Only 8 spots." />
-<meta name="keywords" content="retreat Santa Teresa Costa Rica, surf retreat Costa Rica, yoga retreat Santa Teresa, adventure retreat Costa Rica, SupAventura retreat December 2026" />
+<title>Costa Rica Surf & Adventure — SupAventura · December 2026</title>
+<meta name="description" content="7-day surf and adventure trip in Santa Teresa, Costa Rica. Small group experience — surf, yoga, Isla Tortuga, waterfalls, cacao and community. December 5–12, 2026." />
+<meta name="keywords" content="surf trip Costa Rica, adventure Santa Teresa, surf retreat Costa Rica, SupAventura December 2026, yoga surf Santa Teresa" />
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
 <style>
+/* ── RETREAT-SPECIFIC STYLES ── */
 :root {
-  --sand: #E8E0D0;
-  --sage: #7A8C6E;
-  --deep: #1C2318;
-  --warm: #D4A96A;
-  --white: #F7F4EE;
-  --mist: #C4CFBB;
-  --ocean: #4A7A8C;
+  --font-mono: 'Space Mono', monospace;
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { background: var(--white); color: var(--deep); font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.7; }
-
-/* NAV */
-nav.site-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 1.2rem 2.5rem;
-  transition: background 0.4s;
-}
-nav.site-nav.scrolled { background: rgba(247,244,238,0.94); backdrop-filter: blur(10px); }
-.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; text-decoration: none; }
-nav.site-nav.scrolled .nav-logo { color: var(--deep); }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.85); transition: color 0.2s; }
-nav.site-nav.scrolled .nav-links a { color: var(--deep); }
-.nav-links a:hover { color: #fff; }
-nav.site-nav.scrolled .nav-links a:hover { color: var(--sage); }
 
 /* HERO */
-.hero {
+.retreat-hero {
   min-height: 100vh;
   position: relative;
   display: flex; flex-direction: column; justify-content: flex-end;
   padding: 0 2.5rem 5rem;
   overflow: hidden;
 }
-.hero-bg {
+.retreat-hero-bg {
   position: absolute; inset: 0;
-  background: url('r-sunset.jpg') center 40% / cover no-repeat;
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
 }
-.hero-bg::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(20,30,16,0.35) 0%, rgba(10,18,8,0.82) 100%);
+.retreat-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10,8,6,0.2) 0%, rgba(10,8,6,0.78) 100%);
 }
-.hero-content { position: relative; max-width: 820px; }
-.hero-eyebrow { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--warm); margin-bottom: 1.2rem; display: block; }
-.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 300; line-height: 1.05; color: var(--sand); margin-bottom: 0.4rem; }
-.hero h1 em { font-style: italic; color: var(--mist); }
-.hero-date { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 2.5vw, 1.8rem); color: var(--warm); font-style: italic; margin-bottom: 0.8rem; }
-.hero-tagline { font-size: 0.82rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(232,224,208,0.7); margin-bottom: 2rem; }
-.hero-sub { font-size: 1rem; color: rgba(232,224,208,0.75); max-width: 540px; margin-bottom: 2.5rem; line-height: 1.7; }
-.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+.retreat-hero-content { position: relative; max-width: 860px; }
+.retreat-eyebrow { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.5rem; display: block; font-family: 'Space Mono', monospace; }
+.retreat-title-main { font-family: var(--font-serif); font-size: clamp(4.5rem, 11vw, 9rem); font-weight: 300; line-height: 0.88; color: var(--cream); margin: 0; letter-spacing: -0.01em; }
+.retreat-title-sub { font-family: var(--font-serif); font-size: clamp(2.2rem, 5.5vw, 4.5rem); font-weight: 300; font-style: italic; color: var(--orange); margin: 0.2rem 0 1.2rem; }
+.retreat-date-big { font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--cream); font-weight: 300; margin-bottom: 0.3rem; }
+.retreat-place { font-size: 0.75rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(250,246,240,0.65); margin-bottom: 0.5rem; }
+.retreat-words { font-family: var(--font-serif); font-size: clamp(1rem, 2vw, 1.35rem); font-style: italic; color: rgba(250,246,240,0.7); margin-bottom: 1.8rem; }
+.retreat-hero-sub { font-size: 0.95rem; color: rgba(250,246,240,0.6); max-width: 500px; margin-bottom: 2.5rem; line-height: 1.75; }
+.retreat-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-/* QUICK INFO BAR */
-.info-bar {
-  background: var(--deep);
-  padding: 1.2rem 2.5rem;
+/* INFO BAR */
+.retreat-info-bar {
+  background: var(--earth);
+  padding: 1.1rem 2.5rem;
   display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;
 }
-.info-item { display: flex; align-items: center; gap: 0.5rem; color: var(--sand); font-size: 0.82rem; letter-spacing: 0.05em; }
-.info-item span:first-child { font-size: 1rem; }
+.retreat-info-item { display: flex; align-items: center; gap: 0.5rem; color: var(--sand); font-size: 0.8rem; letter-spacing: 0.04em; }
 
-/* BUTTONS */
-.btn { display: inline-block; padding: 0.9rem 2.2rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; border-radius: 2px; transition: all 0.25s; font-family: 'DM Sans', sans-serif; }
-.btn-primary { background: var(--sage); color: #fff; }
-.btn-primary:hover { background: #8FA080; }
-.btn-warm { background: var(--warm); color: var(--deep); font-weight: 500; }
-.btn-warm:hover { background: #DFBA7A; }
-.btn-ghost { border: 1.5px solid rgba(232,224,208,0.5); color: var(--sand); }
-.btn-ghost:hover { border-color: var(--sand); }
-.btn-outline { border: 1.5px solid var(--deep); color: var(--deep); }
-.btn-outline:hover { background: var(--deep); color: var(--sand); }
-.btn-wa { background: #25D366; color: #fff; }
-.btn-wa:hover { background: #1FB855; }
-
-/* SECTION BASICS */
-.section-label { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sage); display: block; margin-bottom: 1rem; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 2.5rem; }
+/* SECTION COMMON */
+.retreat-section { padding: 5.5rem 2.5rem; }
+.retreat-section--dark { background: var(--earth); }
+.retreat-section--cream { background: var(--cream); }
+.retreat-section--sand { background: var(--sand); }
+.retreat-container { max-width: 1100px; margin: 0 auto; }
+.retreat-center { text-align: center; }
+.retreat-label { font-family: 'Space Mono', monospace; font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--orange); display: block; margin-bottom: 0.8rem; }
+.retreat-label--light { color: var(--sand); opacity: 0.6; }
+.retreat-h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.15; margin-bottom: 1rem; }
+.retreat-h2--light { color: var(--cream); }
+.retreat-p { color: var(--cacao); font-size: 0.96rem; line-height: 1.75; margin-bottom: 0.9rem; }
+.retreat-p--light { color: rgba(250,246,240,0.65); }
 
 /* ABOUT */
-.about { padding: 6rem 2.5rem; background: var(--white); }
-.about-inner { max-width: 760px; margin: 0 auto; text-align: center; }
-.about h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; margin-bottom: 1.4rem; line-height: 1.15; }
-.about p { color: #4A5240; font-size: 1rem; margin-bottom: 1rem; }
-.about p strong { color: var(--deep); font-weight: 500; }
+.retreat-about-inner { max-width: 740px; margin: 0 auto; }
 
-/* INCLUDED */
-.included { background: var(--deep); padding: 6rem 2.5rem; }
-.included-header { text-align: center; margin-bottom: 3.5rem; }
-.included-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--sand); margin-top: 0.6rem; }
-.included-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; max-width: 1100px; margin: 0 auto; }
-.included-item { background: #232E1C; padding: 1.8rem 1.6rem; display: flex; align-items: flex-start; gap: 0.8rem; transition: background 0.25s; }
-.included-item:hover { background: #2E3D25; }
-.included-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
-.included-text { color: var(--mist); font-size: 0.92rem; line-height: 1.5; }
-.included-text strong { display: block; color: var(--sand); font-weight: 400; margin-bottom: 0.15rem; font-size: 0.96rem; }
-.included-note { text-align: center; margin-top: 2rem; color: rgba(196,207,187,0.5); font-size: 0.8rem; font-style: italic; }
+/* INCLUDED GRID */
+.retreat-included-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; margin-top: 2.5rem; }
+.retreat-included-item { background: var(--earth); padding: 1.6rem 1.5rem; display: flex; align-items: flex-start; gap: 0.8rem; transition: background 0.25s; }
+.retreat-included-item:hover { background: #3d2b1f; }
+.retreat-included-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+.retreat-included-text { color: rgba(250,246,240,0.6); font-size: 0.88rem; line-height: 1.5; }
+.retreat-included-text strong { display: block; color: var(--cream); font-weight: 400; margin-bottom: 0.15rem; font-size: 0.92rem; }
+.retreat-included-note { text-align: center; margin-top: 1.5rem; color: rgba(250,246,240,0.3); font-size: 0.76rem; font-style: italic; }
 
 /* HOUSE */
-.house { display: grid; grid-template-columns: 1fr 1fr; }
-.house-gallery { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
-.house-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.house-gallery img:first-child { grid-column: 1 / -1; height: 320px; }
-.house-gallery img:not(:first-child) { height: 220px; }
-.house-text { padding: 5rem 4rem; background: var(--sand); display: flex; flex-direction: column; justify-content: center; }
-.house-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; margin-bottom: 1rem; }
-.house-text p { color: #5A5040; font-size: 0.96rem; margin-bottom: 0.8rem; }
-.rooms-list { margin: 1.2rem 0; }
-.room-item { display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(28,35,24,0.1); font-size: 0.9rem; color: #4A4030; }
-.room-item:last-child { border-bottom: none; }
-.room-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sage); flex-shrink: 0; }
+.retreat-house { display: grid; grid-template-columns: 1fr 1fr; }
+.retreat-house-gallery { display: grid; grid-template-columns: 1fr 1fr; }
+.retreat-house-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.retreat-house-gallery img:first-child { grid-column: 1 / -1; height: 300px; }
+.retreat-house-gallery img:not(:first-child) { height: 200px; }
+.retreat-house-text { padding: 4rem 3.5rem; background: var(--sand); display: flex; flex-direction: column; justify-content: center; }
+.retreat-house-text .retreat-h2 { color: var(--earth); }
+.retreat-room-list { margin: 1rem 0 0.5rem; }
+.retreat-room-item { display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0; border-bottom: 1px solid rgba(26,26,24,0.1); font-size: 0.88rem; color: var(--cacao); }
+.retreat-room-item:last-child { border-bottom: none; }
+.retreat-room-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
 
-/* ITINERARY */
-.itinerary { padding: 6rem 2.5rem; background: var(--white); }
-.itinerary-inner { max-width: 800px; margin: 0 auto; }
-.itinerary h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; margin-bottom: 0.6rem; }
-.itinerary-sub { color: #6A7260; margin-bottom: 3rem; font-size: 0.96rem; }
-.day-parts { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
-.day-part { background: var(--sand); padding: 2rem 1.6rem; border-radius: 2px; }
-.day-part-label { font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; display: block; }
-.day-part ul { list-style: none; }
-.day-part ul li { font-size: 0.92rem; color: #4A4030; padding: 0.35rem 0; border-bottom: 1px solid rgba(28,35,24,0.08); display: flex; align-items: center; gap: 0.5rem; }
-.day-part ul li:last-child { border-bottom: none; }
-.day-part ul li::before { content: '·'; color: var(--warm); font-size: 1.2rem; line-height: 1; }
-
-/* ADVENTURE */
-.adventure { padding: 6rem 2.5rem; background: var(--deep); }
-.adventure-header { text-align: center; margin-bottom: 3.5rem; }
-.adventure-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--sand); margin-top: 0.6rem; }
-.adventure-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5px; max-width: 1100px; margin: 0 auto; }
-.adventure-card { position: relative; overflow: hidden; height: 380px; cursor: pointer; }
-.adventure-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-.adventure-card:hover img { transform: scale(1.04); }
-.adventure-card-overlay { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10,18,8,0.85) 0%, transparent 55%); }
-.adventure-card-text { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem 1.8rem; }
-.adventure-card-text h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: var(--sand); margin-bottom: 0.3rem; }
-.adventure-card-text p { font-size: 0.84rem; color: rgba(196,207,187,0.75); }
+/* ADVENTURE GRID */
+.retreat-adventure-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; margin-top: 2.5rem; }
+.retreat-adventure-card { position: relative; overflow: hidden; height: 360px; }
+.retreat-adventure-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; display: block; }
+.retreat-adventure-card:hover img { transform: scale(1.04); }
+.retreat-adventure-overlay { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10,8,6,0.82) 0%, transparent 55%); }
+.retreat-adventure-text { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.8rem 1.6rem; }
+.retreat-adventure-text h3 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 300; color: var(--cream); margin-bottom: 0.25rem; }
+.retreat-adventure-text p { font-size: 0.8rem; color: rgba(250,246,240,0.65); }
 
 /* SURF */
-.surf { display: grid; grid-template-columns: 1fr 1fr; }
-.surf-text { padding: 5rem 4rem; background: var(--sage); display: flex; flex-direction: column; justify-content: center; }
-.surf-text .section-label { color: var(--mist); }
-.surf-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; color: #fff; margin-bottom: 1rem; }
-.surf-text p { color: rgba(255,255,255,0.8); font-size: 0.96rem; margin-bottom: 0.8rem; }
-.surf-features { margin-top: 1.2rem; }
-.surf-feature { display: flex; align-items: center; gap: 0.7rem; padding: 0.5rem 0; color: rgba(255,255,255,0.85); font-size: 0.9rem; }
-.surf-feature::before { content: '✓'; color: var(--warm); font-weight: 500; }
-.surf-gallery { display: grid; grid-template-columns: 1fr 1fr; }
-.surf-gallery img { width: 100%; height: 280px; object-fit: cover; display: block; }
+.retreat-surf { display: grid; grid-template-columns: 1fr 1fr; }
+.retreat-surf-text { padding: 4.5rem 3.5rem; background: var(--earth); display: flex; flex-direction: column; justify-content: center; }
+.retreat-surf-feature { display: flex; align-items: center; gap: 0.6rem; padding: 0.45rem 0; color: rgba(250,246,240,0.75); font-size: 0.88rem; border-bottom: 1px solid rgba(250,246,240,0.07); }
+.retreat-surf-feature:last-child { border-bottom: none; }
+.retreat-surf-feature::before { content: '✓'; color: var(--orange); }
+.retreat-surf-gallery { display: grid; grid-template-columns: 1fr 1fr; }
+.retreat-surf-gallery img { width: 100%; height: 270px; object-fit: cover; display: block; }
 
 /* WELLNESS */
-.wellness { padding: 6rem 2.5rem; background: var(--white); text-align: center; }
-.wellness h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; margin-bottom: 1rem; }
-.wellness-sub { color: #6A7260; max-width: 580px; margin: 0 auto 3rem; font-size: 0.96rem; }
-.wellness-items { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
-.wellness-item { background: var(--sand); padding: 1.5rem 2rem; text-align: center; flex: 1; min-width: 160px; max-width: 200px; }
-.wellness-item .wi-icon { font-size: 1.8rem; margin-bottom: 0.6rem; display: block; }
-.wellness-item p { font-size: 0.88rem; color: #5A5040; }
-.wellness-gallery { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto; gap: 1.5px; max-width: 1100px; margin: 2.5rem auto 0; }
-.wellness-gallery img { width: 100%; height: 300px; object-fit: cover; display: block; }
-.wellness-gallery img:first-child { grid-column: 1 / 3; height: 380px; }
-@media (max-width: 768px) { .wellness-gallery { grid-template-columns: 1fr; } .wellness-gallery img, .wellness-gallery img:first-child { height: 240px; grid-column: auto; } }
+.retreat-wellness-items { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin: 1.5rem auto 2rem; max-width: 900px; }
+.retreat-wellness-item { background: var(--sand); padding: 1.4rem 1.8rem; text-align: center; flex: 1; min-width: 140px; max-width: 180px; }
+.retreat-wellness-icon { font-size: 1.6rem; display: block; margin-bottom: 0.5rem; }
+.retreat-wellness-item p { font-size: 0.82rem; color: var(--cacao); line-height: 1.4; }
+.retreat-wellness-gallery { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 1.5px; max-width: 1100px; margin: 0 auto; }
+.retreat-wellness-gallery img { width: 100%; height: 240px; object-fit: cover; display: block; }
+.retreat-wellness-gallery img:first-child { grid-row: 1 / 3; height: 100%; }
 
-/* FOR WHO */
-.for-who { background: var(--sand); padding: 6rem 2.5rem; }
-.for-who-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; max-width: 1000px; margin: 0 auto; align-items: center; }
-.for-who h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; margin-bottom: 1.2rem; }
-.for-who p { color: #5A5040; font-size: 0.96rem; margin-bottom: 1.5rem; }
-.for-who-list { list-style: none; }
-.for-who-list li { padding: 0.55rem 0; border-bottom: 1px solid rgba(28,35,24,0.1); font-size: 0.92rem; color: #4A4030; display: flex; align-items: center; gap: 0.6rem; }
-.for-who-list li:last-child { border-bottom: none; }
-.for-who-list li::before { content: '✓'; color: var(--sage); font-weight: 600; }
-.for-who-img { height: 480px; object-fit: cover; width: 100%; }
+/* ITINERARY */
+.retreat-day-parts { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+.retreat-day-part { background: var(--sand); padding: 2rem 1.6rem; }
+.retreat-day-part-label { font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; display: block; font-family: 'Space Mono', monospace; }
+.retreat-day-part ul { list-style: none; }
+.retreat-day-part ul li { font-size: 0.88rem; color: var(--cacao); padding: 0.3rem 0; border-bottom: 1px solid rgba(26,26,24,0.08); display: flex; gap: 0.5rem; align-items: center; }
+.retreat-day-part ul li:last-child { border-bottom: none; }
+.retreat-day-part ul li::before { content: '·'; color: var(--orange); font-size: 1.2rem; }
 
 /* MEALS */
-.meals { padding: 5rem 2.5rem; background: var(--deep); text-align: center; }
-.meals h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--sand); margin-bottom: 1rem; }
-.meals p { color: rgba(196,207,187,0.7); max-width: 560px; margin: 0 auto 2.5rem; }
-.meals-grid { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-.meal-item { background: #232E1C; padding: 1.4rem 1.8rem; text-align: center; min-width: 140px; }
-.meal-item .meal-icon { font-size: 1.5rem; display: block; margin-bottom: 0.4rem; }
-.meal-item p { color: var(--mist); font-size: 0.85rem; }
-.meal-item strong { display: block; color: var(--sand); font-size: 1.1rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 0.2rem; }
-.meals-photos { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5px; max-width: 1100px; margin: 2.5rem auto 0; }
-.meals-photos img { width: 100%; height: 280px; object-fit: cover; display: block; }
-@media (max-width: 768px) { .meals-photos { grid-template-columns: 1fr; } .meals-photos img { height: 220px; } }
+.retreat-meals-counts { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0 2rem; }
+.retreat-meal-item { background: var(--earth); padding: 1.3rem 1.8rem; text-align: center; min-width: 130px; }
+.retreat-meal-icon { font-size: 1.4rem; display: block; margin-bottom: 0.4rem; }
+.retreat-meal-item strong { display: block; color: var(--cream); font-size: 1.6rem; font-family: var(--font-serif); margin-bottom: 0.1rem; }
+.retreat-meal-item p { color: rgba(250,246,240,0.5); font-size: 0.8rem; }
+.retreat-meals-photos { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5px; max-width: 1100px; margin: 0 auto; }
+.retreat-meals-photos img { width: 100%; height: 260px; object-fit: cover; display: block; }
+
+/* FOR WHO */
+.retreat-for-who-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; max-width: 1000px; margin: 0 auto; align-items: center; }
+.retreat-for-who-list { list-style: none; margin-top: 1rem; }
+.retreat-for-who-list li { padding: 0.5rem 0; border-bottom: 1px solid rgba(26,26,24,0.1); font-size: 0.9rem; color: var(--cacao); display: flex; gap: 0.6rem; align-items: center; }
+.retreat-for-who-list li:last-child { border-bottom: none; }
+.retreat-for-who-list li::before { content: '✓'; color: var(--orange); font-weight: 600; }
+.retreat-for-who-img { height: 460px; object-fit: cover; width: 100%; }
 
 /* PRICING */
-.pricing { padding: 6rem 2.5rem; background: var(--white); text-align: center; }
-.pricing h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; margin-bottom: 0.6rem; }
-.pricing-sub { color: #6A7260; margin-bottom: 3rem; }
-.pricing-cards { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 3rem; }
-.price-card { background: var(--sand); padding: 2.5rem 3rem; text-align: center; min-width: 260px; position: relative; }
-.price-card.featured { background: var(--deep); }
-.price-tag { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--sage); display: block; margin-bottom: 0.8rem; }
-.price-card.featured .price-tag { color: var(--warm); }
-.price-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--warm); color: var(--deep); font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 1rem; white-space: nowrap; font-weight: 500; }
-.price-amount { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: var(--deep); line-height: 1; margin-bottom: 0.3rem; }
-.price-card.featured .price-amount { color: var(--sand); }
-.price-period { font-size: 0.8rem; color: #8A8070; margin-bottom: 1rem; }
-.price-card.featured .price-period { color: rgba(196,207,187,0.6); }
-.price-deadline { font-size: 0.78rem; color: #8A8070; margin-bottom: 1.5rem; }
-.price-card.featured .price-deadline { color: rgba(196,207,187,0.5); }
-.price-details { list-style: none; text-align: left; margin-bottom: 1.5rem; }
-.price-details li { font-size: 0.85rem; padding: 0.4rem 0; border-bottom: 1px solid rgba(28,35,24,0.08); display: flex; align-items: center; gap: 0.5rem; color: #5A5040; }
-.price-card.featured .price-details li { border-bottom-color: rgba(196,207,187,0.1); color: var(--mist); }
-.price-details li::before { content: '✓'; color: var(--sage); font-weight: 500; }
-.pricing-note { font-size: 0.8rem; color: #8A8070; font-style: italic; max-width: 500px; margin: 0 auto 2rem; }
+.retreat-pricing-cards { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin: 2rem 0; }
+.retreat-price-card { background: var(--sand); padding: 2.5rem 2.8rem; min-width: 250px; position: relative; text-align: center; }
+.retreat-price-card.featured { background: var(--earth); }
+.retreat-price-badge { position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: var(--orange); color: #fff; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.28rem 1rem; white-space: nowrap; font-weight: 500; }
+.retreat-price-tag { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--orange); display: block; margin-bottom: 0.7rem; font-family: monospace; }
+.retreat-price-amount { font-family: var(--font-serif); font-size: 3.2rem; font-weight: 300; color: var(--earth); line-height: 1; margin-bottom: 0.2rem; }
+.retreat-price-card.featured .retreat-price-amount { color: var(--cream); }
+.retreat-price-period { font-size: 0.78rem; color: var(--cacao); margin-bottom: 0.6rem; }
+.retreat-price-card.featured .retreat-price-period { color: rgba(250,246,240,0.4); }
+.retreat-price-deadline { font-size: 0.75rem; color: var(--cacao); margin-bottom: 1.2rem; }
+.retreat-price-card.featured .retreat-price-deadline { color: rgba(250,246,240,0.35); }
+.retreat-price-details { list-style: none; text-align: left; margin-bottom: 1.5rem; }
+.retreat-price-details li { font-size: 0.82rem; padding: 0.38rem 0; border-bottom: 1px solid rgba(26,26,24,0.08); display: flex; gap: 0.5rem; color: var(--cacao); }
+.retreat-price-card.featured .retreat-price-details li { border-bottom-color: rgba(250,246,240,0.08); color: rgba(250,246,240,0.6); }
+.retreat-price-details li::before { content: '✓'; color: var(--orange); }
+.retreat-pricing-note { font-size: 0.78rem; color: var(--cacao); font-style: italic; max-width: 480px; margin: 0 auto 1.8rem; text-align: center; }
 
 /* FAQ */
-.faq { padding: 6rem 2.5rem; background: var(--sand); }
-.faq-inner { max-width: 760px; margin: 0 auto; }
-.faq h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; margin-bottom: 2.5rem; }
-.faq-item { border-bottom: 1px solid rgba(28,35,24,0.15); padding: 1.4rem 0; cursor: pointer; }
-.faq-q { display: flex; justify-content: space-between; align-items: center; font-size: 0.96rem; font-weight: 400; color: var(--deep); }
-.faq-toggle { font-size: 1.4rem; color: var(--sage); transition: transform 0.3s; flex-shrink: 0; margin-left: 1rem; }
-.faq-item.open .faq-toggle { transform: rotate(45deg); }
-.faq-a { font-size: 0.9rem; color: #5A5040; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.3s; line-height: 1.7; }
-.faq-item.open .faq-a { max-height: 300px; padding-top: 0.8rem; }
+.retreat-faq-item { border-bottom: 1px solid rgba(26,26,24,0.12); padding: 1.3rem 0; cursor: pointer; }
+.retreat-faq-q { display: flex; justify-content: space-between; align-items: center; font-size: 0.94rem; color: var(--earth); }
+.retreat-faq-toggle { font-size: 1.3rem; color: var(--orange); transition: transform 0.3s; flex-shrink: 0; margin-left: 1rem; }
+.retreat-faq-item.open .retreat-faq-toggle { transform: rotate(45deg); }
+.retreat-faq-a { font-size: 0.87rem; color: var(--cacao); max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.3s; line-height: 1.75; }
+.retreat-faq-item.open .retreat-faq-a { max-height: 300px; padding-top: 0.8rem; }
 
 /* FINAL CTA */
-.final-cta {
-  min-height: 80vh;
+.retreat-final {
+  min-height: 75vh;
   position: relative;
   display: flex; align-items: center; justify-content: center;
-  text-align: center;
-  overflow: hidden;
+  text-align: center; overflow: hidden;
 }
-.final-cta-bg {
-  position: absolute; inset: 0;
-  background: url('r-group-beach-log.jpg') center center / cover no-repeat;
-}
-.final-cta-bg::after {
-  content: ''; position: absolute; inset: 0;
-  background: rgba(10,18,8,0.72);
-}
-.final-cta-content { position: relative; padding: 4rem 2.5rem; }
-.final-words { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 300; color: var(--sand); line-height: 1.15; margin-bottom: 2rem; }
-.final-words em { font-style: italic; color: var(--warm); }
-.final-sub { color: rgba(232,224,208,0.7); margin-bottom: 2.5rem; font-size: 1rem; }
-.final-cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.retreat-final-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.retreat-final-overlay { position: absolute; inset: 0; background: rgba(10,8,6,0.7); }
+.retreat-final-content { position: relative; padding: 4rem 2.5rem; }
+.retreat-final-words { font-family: var(--font-serif); font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 300; color: var(--cream); line-height: 1.15; margin-bottom: 1.5rem; }
+.retreat-final-words em { font-style: italic; color: var(--orange); }
+.retreat-final-sub { color: rgba(250,246,240,0.65); margin-bottom: 2.5rem; font-size: 1rem; }
+.retreat-final-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
-/* OPTIONAL */
-.optionals { background: var(--white); padding: 3rem 2.5rem; text-align: center; border-top: 1px solid rgba(28,35,24,0.08); }
-.optionals p { font-size: 0.82rem; color: #8A8070; }
-.optionals strong { color: var(--deep); }
-
-/* FOOTER */
-footer { background: var(--deep); padding: 3rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
-.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sand); text-decoration: none; }
-.footer-links { display: flex; gap: 1.5rem; }
-.footer-links a { color: rgba(232,224,208,0.4); text-decoration: none; font-size: 0.78rem; transition: color 0.2s; }
-.footer-links a:hover { color: var(--sand); }
-.footer-copy { color: rgba(232,224,208,0.25); font-size: 0.72rem; width: 100%; }
-
-/* FLOATING WA */
-.wa-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 200; background: #25D366; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.35); transition: transform 0.25s; }
-.wa-float:hover { transform: scale(1.08); }
-.wa-float svg { width: 28px; height: 28px; fill: #fff; }
+/* OPTIONALS */
+.retreat-optionals { background: var(--cream); padding: 2rem 2.5rem; text-align: center; border-top: 1px solid rgba(26,26,24,0.07); }
+.retreat-optionals p { font-size: 0.8rem; color: var(--cacao); }
+.retreat-optionals strong { color: var(--earth); }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  nav.site-nav { padding: 1rem 1.4rem; }
-  .nav-links { display: none; }
-  .hero { padding: 0 1.4rem 4rem; }
-  .info-bar { gap: 1rem; padding: 1rem 1.4rem; }
-  .house { grid-template-columns: 1fr; }
-  .house-text { padding: 3rem 1.6rem; }
-  .surf { grid-template-columns: 1fr; }
-  .surf-text { padding: 3rem 1.6rem; }
-  .for-who-inner { grid-template-columns: 1fr; gap: 2rem; }
-  .for-who-img { height: 320px; }
-  .day-parts { grid-template-columns: 1fr; }
-  .container { padding: 0 1.4rem; }
-  .about, .included, .adventure, .wellness, .pricing, .faq, .meals, .itinerary, .for-who { padding: 4rem 1.4rem; }
-  footer { flex-direction: column; align-items: flex-start; }
+  .retreat-hero { padding: 0 1.4rem 4rem; }
+  .retreat-info-bar { gap: 0.8rem; padding: 1rem 1.4rem; }
+  .retreat-section { padding: 4rem 1.4rem; }
+  .retreat-house, .retreat-surf, .retreat-for-who-inner { grid-template-columns: 1fr; }
+  .retreat-house-text, .retreat-surf-text { padding: 3rem 1.6rem; }
+  .retreat-house-gallery img:first-child { height: 220px; }
+  .retreat-adventure-grid { grid-template-columns: 1fr; }
+  .retreat-adventure-card { height: 280px; }
+  .retreat-day-parts { grid-template-columns: 1fr; }
+  .retreat-wellness-gallery { grid-template-columns: 1fr 1fr; }
+  .retreat-wellness-gallery img:first-child { grid-row: auto; height: 240px; }
+  .retreat-meals-photos { grid-template-columns: 1fr; }
+  .retreat-for-who-img { height: 300px; }
+  .retreat-surf-gallery { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="site-nav" id="siteNav">
-  <a href="index.html" class="nav-logo">SupAventura</a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#included">What's Included</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20the%20SupAventura%20Retreat." target="_blank">WhatsApp</a></li>
-  </ul>
-</nav>
+<!-- NAV (same as rest of site) -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo-link">
+      <img src="assets/img/juli2..png" alt="SUP Aventura" height="52">
+    </a>
+    <nav class="site-nav">
+      <a href="yoga.html" data-en="Yoga" data-es="Yoga">Yoga</a>
+      <a href="cacao.html" data-en="Cacao" data-es="Cacao">Cacao</a>
+      <a href="sound-healing.html" data-en="Sound Healing" data-es="Sanación Sonora">Sound Healing</a>
+      <a href="experiences.html" data-en="Experiences" data-es="Experiencias">Experiences</a>
+      <a href="retreats.html" data-en="Retreats" data-es="Retiros">Retreats</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20the%20Costa%20Rica%20Surf%20%26%20Adventure%20trip." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <button class="lang-toggle" id="langToggle">ES</button>
+    </div>
+  </div>
+</header>
+
+<main>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <span class="hero-eyebrow">Santa Teresa, Costa Rica</span>
-    <h1>SupAventura<br><em>Retreat</em></h1>
-    <p class="hero-date">December 5–12, 2026</p>
-    <p class="hero-tagline">Adventure · Ocean · Wellness · Connection</p>
-    <p class="hero-sub">7 days combining surfing, yoga, adventure, nature and community in one of the most beautiful destinations in Costa Rica. <strong>Small group experience — only 8 spots.</strong></p>
-    <div class="hero-ctas">
-      <a href="#pricing" class="btn btn-warm">Reserve Your Spot</a>
-      <a href="#included" class="btn btn-ghost">What's Included ↓</a>
+<section class="retreat-hero">
+  <div class="retreat-hero-bg" style="background-image: url('assets/img/WhatsApp%20Image%202026-07-16%20at%202.54.11%20PM.jpeg');"></div>
+  <div class="retreat-hero-overlay"></div>
+  <div class="retreat-hero-content">
+    <span class="retreat-eyebrow">SupAventura presents</span>
+    <h1 class="retreat-title-main">Costa Rica</h1>
+    <p class="retreat-title-sub">Surf &amp; Adventure</p>
+    <p class="retreat-date-big">December 5–12, 2026</p>
+    <p class="retreat-place">Santa Teresa · Costa Rica</p>
+    <p class="retreat-words">Atardeceres · Aventuras · Surf · Naturaleza</p>
+    <p class="retreat-hero-sub">7 days combining surfing, yoga, adventure, nature and community in one of the most beautiful destinations in Costa Rica. Small group experience — only 8 spots.</p>
+    <div class="retreat-hero-ctas">
+      <a href="#pricing" class="btn btn-primary">Reserve Your Spot</a>
+      <a href="#included" class="btn btn-outline">What's Included ↓</a>
     </div>
   </div>
 </section>
 
-<!-- QUICK INFO BAR -->
-<div class="info-bar">
-  <div class="info-item"><span>📍</span><span>Santa Teresa, Costa Rica</span></div>
-  <div class="info-item"><span>📅</span><span>Dec 5–12, 2026</span></div>
-  <div class="info-item"><span>⏳</span><span>7 days / 7 nights</span></div>
-  <div class="info-item"><span>👥</span><span>Max 8 people — small group</span></div>
-  <div class="info-item"><span>🧘</span><span>All levels welcome</span></div>
-  <div class="info-item"><span>🍽️</span><span>All meals included</span></div>
+<!-- INFO BAR -->
+<div class="retreat-info-bar">
+  <div class="retreat-info-item"><span>📍</span><span>Santa Teresa, Costa Rica</span></div>
+  <div class="retreat-info-item"><span>📅</span><span>Dec 5–12, 2026</span></div>
+  <div class="retreat-info-item"><span>⏳</span><span>7 days / 7 nights</span></div>
+  <div class="retreat-info-item"><span>👥</span><span>Max 8 people — small group</span></div>
+  <div class="retreat-info-item"><span>🧘</span><span>All levels welcome</span></div>
+  <div class="retreat-info-item"><span>🍽️</span><span>All meals included</span></div>
 </div>
 
 <!-- ABOUT -->
-<section class="about">
-  <div class="about-inner">
-    <span class="section-label">The Experience</span>
-    <h2>More Than a Retreat</h2>
-    <p>This is not just a yoga retreat. It is a <strong>complete experience</strong> where adventure, movement and wellness come together.</p>
-    <p>SupAventura is built on small groups. <strong>Maximum 8 people per trip</strong> — so every experience feels personal, connected and intentional. This is not a mass retreat. It's a curated week designed around you.</p>
-    <p>Throughout the week you'll explore Santa Teresa, practice yoga, learn to surf, discover hidden waterfalls, visit Tortuga Island, enjoy nourishing meals and share unforgettable moments with an amazing community.</p>
-    <p>Come alone or with friends. Many guests travel solo and arrive without knowing anyone — <strong>and leave with new friendships.</strong></p>
-    <p style="margin-top:1rem; font-size:0.88rem; color: #8A8070;">No surfing experience. No yoga experience. Just bring your curiosity. 18+ only.</p>
+<section class="retreat-section retreat-section--cream reveal">
+  <div class="retreat-about-inner retreat-center">
+    <span class="retreat-label">The Experience</span>
+    <h2 class="retreat-h2">More Than a Trip</h2>
+    <p class="retreat-p">This is not just a surf trip. It is a <strong>complete experience</strong> where adventure, movement and wellness come together in one of the most magical places on earth.</p>
+    <p class="retreat-p">SupAventura is built on small groups. <strong>Maximum 8 people per trip</strong> — so every experience feels personal, connected and intentional. This is not a mass retreat. It's a curated week designed around you.</p>
+    <p class="retreat-p">Come alone or with friends. Many guests travel solo and arrive without knowing anyone — <strong>and leave with new friendships.</strong></p>
+    <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--cacao);">No surfing experience. No yoga experience. Just bring your curiosity. 18+ only.</p>
   </div>
 </section>
 
-<!-- WHAT'S INCLUDED -->
-<section class="included" id="included">
-  <div class="included-header">
-    <span class="section-label" style="color:var(--warm);">Everything You Need</span>
-    <h2>What's Included</h2>
+<!-- INCLUDED -->
+<section class="retreat-section retreat-section--dark reveal" id="included">
+  <div class="retreat-container">
+    <div class="retreat-center">
+      <span class="retreat-label retreat-label--light">Everything You Need</span>
+      <h2 class="retreat-h2 retreat-h2--light">What's Included</h2>
+    </div>
+    <div class="retreat-included-grid">
+      <div class="retreat-included-item"><span class="retreat-included-icon">🏠</span><div class="retreat-included-text"><strong>7 Nights Accommodation</strong>Beachfront house · shared rooms · ocean views</div></div>
+      <div class="retreat-included-item"><span class="retreat-included-icon">🍽️</span><div class="retreat-included-text"><strong>All Meals</strong>7 breakfasts · 6 lunches · 6 dinners + welcome dinner on arrival</div></div>
+      <div class="retreat-included-item"><span class="retreat-included-icon">🏄</span><div class="retreat-included-text"><strong>4 Surf Lessons</strong>With local instructors + video analysis · all levels</div></div>
+      <div class="retreat-included-item"><span class="retreat-included-icon">🧘</span><div class="retreat-included-text"><strong>Yoga Sessions</strong>On the beach or the yoga deck</div></div>
+      <div class="retreat-included-item"><span class="retreat-included-icon">🚤</span><div class="retreat-included-text"><strong>Isla Tortuga + Bioluminescence</strong>Boat trip · snorkeling · wakeboard · paradise beaches</div></div>
+      <div class="retreat-included-item"><span class="retreat-included-icon">🏞️</span><div class="retreat-included-text"><strong>ATV Waterfall Adventure</strong>Montezuma · jungle trails · hidden beaches</div></div>
+      <div class="retreat-included-item"><span class="retreat-included-icon">🏄‍♀️</span><div class="retreat-included-text"><strong>SUP Yoga</strong>Yoga on the water — a unique experience</div></div>
+      <div class="retreat-included-item"><span class="retreat-included-icon">🔔</span><div class="retreat-included-text"><strong>Sound Healing</strong>Immersive ceremony with therapeutic instruments</div></div>
+      <div class="retreat-included-item"><span class="retreat-included-icon">🌿</span><div class="retreat-included-text"><strong>Cacao Ceremony</strong>Heart-opening ceremonial cacao experience</div></div>
+      <div class="retreat-included-item"><span class="retreat-included-icon">🌙</span><div class="retreat-included-text"><strong>New Moon Ritual</strong>A special ceremony to set intentions</div></div>
+      <div class="retreat-included-item"><span class="retreat-included-icon">🚗</span><div class="retreat-included-text"><strong>Transportation</strong>To and from all activities included</div></div>
+      <div class="retreat-included-item"><span class="retreat-included-icon">🎁</span><div class="retreat-included-text"><strong>Welcome Gift</strong>A special SupAventura gift waiting for you</div></div>
+    </div>
+    <p class="retreat-included-note">* Shared bathroom · Bunk beds · The house may have other guests outside the retreat group.</p>
   </div>
-  <div class="included-grid">
-    <div class="included-item">
-      <span class="included-icon">🏠</span>
-      <div class="included-text"><strong>7 Nights Accommodation</strong>Zeneidas Beach House, beachfront, shared rooms</div>
-    </div>
-    <div class="included-item">
-      <span class="included-icon">🍽️</span>
-      <div class="included-text"><strong>All Meals</strong>7 breakfasts · 6 lunches · 6 dinners + welcome dinner on arrival</div>
-    </div>
-    <div class="included-item">
-      <span class="included-icon">🏄</span>
-      <div class="included-text"><strong>4 Surf Lessons</strong>With local instructors + video analysis · all levels</div>
-    </div>
-    <div class="included-item">
-      <span class="included-icon">🧘</span>
-      <div class="included-text"><strong>Yoga Sessions</strong>On the beach or the yoga deck at Zeneidas</div>
-    </div>
-    <div class="included-item">
-      <span class="included-icon">🚤</span>
-      <div class="included-text"><strong>Isla Tortuga + Bioluminescence</strong>Boat trip · snorkeling · wakeboard · paradise beaches</div>
-    </div>
-    <div class="included-item">
-      <span class="included-icon">🏞️</span>
-      <div class="included-text"><strong>ATV Waterfall Adventure</strong>Montezuma waterfalls · jungle trails · hidden beaches</div>
-    </div>
-    <div class="included-item">
-      <span class="included-icon">🏄‍♀️</span>
-      <div class="included-text"><strong>SUP Yoga</strong>Yoga on the water — a unique experience</div>
-    </div>
-    <div class="included-item">
-      <span class="included-icon">🔔</span>
-      <div class="included-text"><strong>Sound Healing</strong>Immersive sound journey with therapeutic instruments</div>
-    </div>
-    <div class="included-item">
-      <span class="included-icon">🌿</span>
-      <div class="included-text"><strong>Cacao Ceremony</strong>Heart-opening ceremonial cacao experience</div>
-    </div>
-    <div class="included-item">
-      <span class="included-icon">🌙</span>
-      <div class="included-text"><strong>New Moon Ritual</strong>A special ceremony to set intentions</div>
-    </div>
-    <div class="included-item">
-      <span class="included-icon">🚗</span>
-      <div class="included-text"><strong>Transportation</strong>To and from all activities included</div>
-    </div>
-    <div class="included-item">
-      <span class="included-icon">🎁</span>
-      <div class="included-text"><strong>Welcome Gift</strong>A special SupAventura gift waiting for you</div>
-    </div>
-  </div>
-  <p class="included-note">* Shared bathroom · Bunk beds · The house may have other Zeneidas Garden guests outside the retreat group.</p>
 </section>
 
 <!-- HOUSE -->
-<section class="house" id="accommodation">
-  <div class="house-gallery">
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.04.15 PM.jpeg" alt="Zeneidas Beach House — common areas and ocean view" />
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 2.18.40 PM (1).jpeg" alt="Zeneidas Garden tropical path" />
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.04.15 PM (2).jpeg" alt="Kitchen and dining area at Zeneidas" />
+<section class="retreat-house reveal">
+  <div class="retreat-house-gallery">
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.04.15%20PM.jpeg" alt="Beachfront house common areas and ocean view" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%202.18.40%20PM%20(1).jpeg" alt="Tropical garden path" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.04.15%20PM%20(2).jpeg" alt="Kitchen and dining area" />
   </div>
-  <div class="house-text">
-    <span class="section-label">Your Home</span>
-    <h2>Your Beachfront House</h2>
-    <p>For one week, a beautiful <strong>beachfront house</strong> will be your home in Santa Teresa. Located directly in front of the ocean and surrounded by jungle.</p>
-    <p>The whole group stays together — just you and your travel companions. No strangers, no crowds. <strong>Maximum 8 people.</strong></p>
-    <div class="rooms-list">
-      <div class="room-item"><div class="room-dot"></div>Room for 2 — air conditioning</div>
-      <div class="room-item"><div class="room-dot"></div>Room for 4 — air conditioning</div>
-      <div class="room-item"><div class="room-dot"></div>Room for 2 — ocean view, fan + natural breeze</div>
+  <div class="retreat-house-text">
+    <span class="retreat-label">Your Home</span>
+    <h2 class="retreat-h2">Your Beachfront House</h2>
+    <p class="retreat-p">For one week, a beautiful <strong>beachfront house</strong> will be your home in Santa Teresa — directly in front of the ocean and surrounded by jungle.</p>
+    <p class="retreat-p">The whole group stays together. Just you and your travel companions. <strong>Maximum 8 people.</strong></p>
+    <div class="retreat-room-list">
+      <div class="retreat-room-item"><div class="retreat-room-dot"></div>Room for 2 — air conditioning</div>
+      <div class="retreat-room-item"><div class="retreat-room-dot"></div>Room for 4 — air conditioning</div>
+      <div class="retreat-room-item"><div class="retreat-room-dot"></div>Room for 2 — ocean view, fan + natural breeze</div>
     </div>
-    <p style="font-size:0.83rem; color:#8A8070; margin-top:0.5rem;">All rooms have bunk beds · 1 shared bathroom · Full kitchen · Common areas · Yoga deck</p>
+    <p style="font-size:0.8rem; color:var(--cacao); margin-top:0.6rem;">Bunk beds · 1 shared bathroom · Full kitchen · Common areas · Yoga deck</p>
   </div>
 </section>
 
-<!-- ADVENTURE -->
-<section class="adventure" id="adventures">
-  <div class="adventure-header">
-    <span class="section-label" style="color:var(--warm);">Explore Costa Rica</span>
-    <h2>Adventure Experiences</h2>
-  </div>
-  <div class="adventure-grid">
-    <div class="adventure-card">
-      <img src="assets/img/WhatsApp Image 2026-07-16 at 3.15.20 PM.jpeg" alt="Group boat trip to Isla Tortuga" />
-      <div class="adventure-card-overlay"></div>
-      <div class="adventure-card-text">
-        <h3>🚤 Isla Tortuga</h3>
-        <p>Full day boat trip to paradise — snorkeling, wakeboard & hidden beaches</p>
-      </div>
+<!-- ADVENTURES -->
+<section class="retreat-section retreat-section--dark reveal" id="adventures">
+  <div class="retreat-container">
+    <div class="retreat-center">
+      <span class="retreat-label retreat-label--light">Explore Costa Rica</span>
+      <h2 class="retreat-h2 retreat-h2--light">Adventure Experiences</h2>
     </div>
-    <div class="adventure-card">
-      <img src="assets/img/WhatsApp Image 2026-07-16 at 3.18.46 PM.jpeg" alt="Wakeboard at Isla Tortuga" />
-      <div class="adventure-card-overlay"></div>
-      <div class="adventure-card-text">
-        <h3>🏄 Wakeboard</h3>
-        <p>Ride the waves behind the boat in crystal-clear Pacific waters</p>
+    <div class="retreat-adventure-grid">
+      <div class="retreat-adventure-card">
+        <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.15.20%20PM.jpeg" alt="Group boat trip to Isla Tortuga" />
+        <div class="retreat-adventure-overlay"></div>
+        <div class="retreat-adventure-text"><h3>🚤 Isla Tortuga</h3><p>Full day boat trip · snorkeling · wakeboard · paradise beaches</p></div>
       </div>
-    </div>
-    <div class="adventure-card">
-      <img src="assets/img/WhatsApp Image 2026-07-16 at 3.19.30 PM.jpeg" alt="Bioluminescence experience at night" />
-      <div class="adventure-card-overlay"></div>
-      <div class="adventure-card-text">
-        <h3>✨ Bioluminescence</h3>
-        <p>A magical night experience you'll never forget — glowing blue waters</p>
+      <div class="retreat-adventure-card">
+        <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.18.46%20PM.jpeg" alt="Wakeboard at Isla Tortuga" />
+        <div class="retreat-adventure-overlay"></div>
+        <div class="retreat-adventure-text"><h3>🏄 Wakeboard</h3><p>Ride the waves behind the boat in crystal-clear Pacific waters</p></div>
       </div>
-    </div>
-    <div class="adventure-card">
-      <img src="assets/img/WhatsApp Image 2026-07-16 at 3.19.50 PM.jpeg" alt="Snorkeling at Isla Tortuga" />
-      <div class="adventure-card-overlay"></div>
-      <div class="adventure-card-text">
-        <h3>🤿 Snorkeling</h3>
-        <p>Explore the underwater world of the Pacific in turquoise waters</p>
+      <div class="retreat-adventure-card">
+        <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.19.30%20PM.jpeg" alt="Bioluminescence experience" />
+        <div class="retreat-adventure-overlay"></div>
+        <div class="retreat-adventure-text"><h3>✨ Bioluminescence</h3><p>A magical night experience — glowing blue waters</p></div>
       </div>
-    </div>
-    <div class="adventure-card">
-      <img src="assets/img/WhatsApp Image 2026-07-16 at 3.22.15 PM.jpeg" alt="Montezuma waterfalls Costa Rica" />
-      <div class="adventure-card-overlay"></div>
-      <div class="adventure-card-text">
-        <h3>🏞️ Montezuma Waterfalls</h3>
-        <p>ATV adventure · jungle trails · hidden beaches with a local guide</p>
+      <div class="retreat-adventure-card">
+        <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.22.15%20PM.jpeg" alt="Montezuma waterfalls" />
+        <div class="retreat-adventure-overlay"></div>
+        <div class="retreat-adventure-text"><h3>🏞️ Montezuma Waterfalls</h3><p>ATV adventure · jungle trails · hidden beaches</p></div>
       </div>
-    </div>
-    <div class="adventure-card">
-      <img src="assets/img/WhatsApp Image 2026-07-16 at 3.23.50 PM.jpeg" alt="ATV convoy through the jungle" />
-      <div class="adventure-card-overlay"></div>
-      <div class="adventure-card-text">
-        <h3>🏍️ ATV Through the Jungle</h3>
-        <p>Ride through Costa Rica's wild landscape with the group</p>
+      <div class="retreat-adventure-card">
+        <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.23.50%20PM.jpeg" alt="ATV through the jungle" />
+        <div class="retreat-adventure-overlay"></div>
+        <div class="retreat-adventure-text"><h3>🏍️ ATV Through the Jungle</h3><p>Ride through Costa Rica's wild landscape</p></div>
       </div>
-    </div>
-    <div class="adventure-card">
-      <img src="assets/img/WhatsApp Image 2026-07-16 at 3.13.44 PM (2).jpeg" alt="Surf lessons Santa Teresa" />
-      <div class="adventure-card-overlay"></div>
-      <div class="adventure-card-text">
-        <h3>🌊 Surf Santa Teresa</h3>
-        <p>4 lessons with local instructors · video analysis · all levels</p>
+      <div class="retreat-adventure-card">
+        <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.13.44%20PM%20(2).jpeg" alt="Surf lessons Santa Teresa" />
+        <div class="retreat-adventure-overlay"></div>
+        <div class="retreat-adventure-text"><h3>🌊 Surf Santa Teresa</h3><p>4 lessons with local instructors · video analysis</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- SURF -->
-<section class="surf">
-  <div class="surf-text">
-    <span class="section-label">In the Water</span>
-    <h2>Learn to Surf with Local Instructors</h2>
-    <p>Experience the famous waves of Santa Teresa with professionals who know these waters inside out.</p>
-    <div class="surf-features">
-      <div class="surf-feature">4 surf lessons throughout the week</div>
-      <div class="surf-feature">Video analysis to accelerate your progress</div>
-      <div class="surf-feature">Transportation included to and from the surf spot</div>
-      <div class="surf-feature">All levels — from complete beginners to intermediate</div>
-      <div class="surf-feature">Local instructors with years of experience</div>
+<section class="retreat-surf reveal">
+  <div class="retreat-surf-text">
+    <span class="retreat-label retreat-label--light">In the Water</span>
+    <h2 class="retreat-h2 retreat-h2--light">Learn to Surf with Local Instructors</h2>
+    <p class="retreat-p retreat-p--light">Experience the famous waves of Santa Teresa with professionals who know these waters inside out.</p>
+    <div style="margin-top:1.2rem;">
+      <div class="retreat-surf-feature">4 surf lessons throughout the week</div>
+      <div class="retreat-surf-feature">Video analysis to accelerate your progress</div>
+      <div class="retreat-surf-feature">Transportation included to and from the surf spot</div>
+      <div class="retreat-surf-feature">All levels — beginners to intermediate</div>
+      <div class="retreat-surf-feature">Local instructors with years of experience</div>
     </div>
   </div>
-  <div class="surf-gallery">
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.26.00 PM.jpeg" alt="Walking through the jungle to surf in Santa Teresa" />
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.13.44 PM (1).jpeg" alt="Surf lesson on the beach" />
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.13.44 PM.jpeg" alt="Walking out of the ocean with surfboards" />
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.42.52 PM.jpeg" alt="Two surfers on the beach" />
+  <div class="retreat-surf-gallery">
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.26.00%20PM.jpeg" alt="Walking through jungle to surf" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.13.44%20PM%20(1).jpeg" alt="Surf lesson on the beach" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.13.44%20PM.jpeg" alt="Walking out of the ocean" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.42.52%20PM.jpeg" alt="Surfers on the beach" />
   </div>
 </section>
 
 <!-- WELLNESS -->
-<section class="wellness">
-  <span class="section-label">Mind & Body</span>
-  <h2>Reconnect With Yourself</h2>
-  <p class="wellness-sub">Every activity has been thoughtfully chosen to help you reconnect with your body, mind and nature.</p>
-  <div class="wellness-items">
-    <div class="wellness-item">
-      <span class="wi-icon">🧘</span>
-      <p>Yoga by the ocean or on the deck</p>
-    </div>
-    <div class="wellness-item">
-      <span class="wi-icon">🏄‍♀️</span>
-      <p>SUP Yoga on the water</p>
-    </div>
-    <div class="wellness-item">
-      <span class="wi-icon">🔔</span>
-      <p>Sound Healing ceremony</p>
-    </div>
-    <div class="wellness-item">
-      <span class="wi-icon">🌿</span>
-      <p>Cacao ceremony</p>
-    </div>
-    <div class="wellness-item">
-      <span class="wi-icon">🌙</span>
-      <p>New Moon ritual</p>
+<section class="retreat-section retreat-section--cream reveal">
+  <div class="retreat-container retreat-center">
+    <span class="retreat-label">Mind &amp; Body</span>
+    <h2 class="retreat-h2">Reconnect With Yourself</h2>
+    <p class="retreat-p" style="max-width:580px; margin:0 auto 1.5rem;">Every activity has been thoughtfully chosen to help you reconnect with your body, mind and nature.</p>
+    <div class="retreat-wellness-items">
+      <div class="retreat-wellness-item"><span class="retreat-wellness-icon">🧘</span><p>Yoga by the ocean or on the deck</p></div>
+      <div class="retreat-wellness-item"><span class="retreat-wellness-icon">🏄‍♀️</span><p>SUP Yoga on the water</p></div>
+      <div class="retreat-wellness-item"><span class="retreat-wellness-icon">🔔</span><p>Sound Healing ceremony</p></div>
+      <div class="retreat-wellness-item"><span class="retreat-wellness-icon">🌿</span><p>Cacao ceremony</p></div>
+      <div class="retreat-wellness-item"><span class="retreat-wellness-icon">🌙</span><p>New Moon ritual</p></div>
     </div>
   </div>
-  <div class="wellness-gallery">
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.32.35 PM.jpeg" alt="Yoga deck at night with handpan" />
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.30.32 PM.jpeg" alt="Sound healing on the beach at sunset" />
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.28.42 PM.jpeg" alt="Yoga session in the jungle deck" />
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.29.07 PM.jpeg" alt="Yoga class on the deck surrounded by jungle" />
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.30.57 PM.jpeg" alt="Sound healing ceremony at sunset" />
+  <div class="retreat-wellness-gallery">
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.32.35%20PM.jpeg" alt="Yoga deck at night with handpan" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.30.32%20PM.jpeg" alt="Sound healing on the beach" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.28.42%20PM.jpeg" alt="Yoga pose in jungle deck" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.30.57%20PM.jpeg" alt="Sound healing at sunset" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.29.07%20PM.jpeg" alt="Yoga class on deck" />
   </div>
 </section>
 
 <!-- ITINERARY -->
-<section class="itinerary">
-  <div class="itinerary-inner">
-    <span class="section-label">Sample Schedule</span>
-    <h2>A Typical Day</h2>
-    <p class="itinerary-sub">Every day is different — this is just a taste of what to expect.</p>
-    <div class="day-parts">
-      <div class="day-part">
-        <span class="day-part-label">☀️ Morning</span>
-        <ul>
-          <li>Yoga session</li>
-          <li>Healthy breakfast</li>
-          <li>Surf lesson</li>
-        </ul>
+<section class="retreat-section retreat-section--sand reveal">
+  <div class="retreat-container" style="max-width:800px;">
+    <span class="retreat-label">Sample Schedule</span>
+    <h2 class="retreat-h2">A Typical Day</h2>
+    <p class="retreat-p">Every day is different — this is just a taste of what to expect.</p>
+    <div class="retreat-day-parts">
+      <div class="retreat-day-part">
+        <span class="retreat-day-part-label">☀️ Morning</span>
+        <ul><li>Yoga session</li><li>Healthy breakfast</li><li>Surf lesson</li></ul>
       </div>
-      <div class="day-part">
-        <span class="day-part-label">🌤 Afternoon</span>
-        <ul>
-          <li>Lunch together</li>
-          <li>Adventure activity</li>
-          <li>Beach time</li>
-        </ul>
+      <div class="retreat-day-part">
+        <span class="retreat-day-part-label">🌤 Afternoon</span>
+        <ul><li>Lunch together</li><li>Adventure activity</li><li>Beach time</li></ul>
       </div>
-      <div class="day-part">
-        <span class="day-part-label">🌅 Evening</span>
-        <ul>
-          <li>Sunset on the beach</li>
-          <li>Community dinner</li>
-          <li>Ceremony or free time</li>
-        </ul>
+      <div class="retreat-day-part">
+        <span class="retreat-day-part-label">🌅 Evening</span>
+        <ul><li>Sunset on the beach</li><li>Community dinner</li><li>Ceremony or free time</li></ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- MEALS -->
-<section class="meals">
-  <span class="section-label" style="color:var(--warm);">Nourishment</span>
-  <h2>Healthy Food Every Day</h2>
-  <p>All meals prepared by our private chef using fresh, nourishing ingredients inspired by the vibrant flavors of Costa Rica.</p>
-  <div class="meals-grid">
-    <div class="meal-item">
-      <span class="meal-icon">🌅</span>
-      <strong>7</strong>
-      <p>Breakfasts</p>
-    </div>
-    <div class="meal-item">
-      <span class="meal-icon">☀️</span>
-      <strong>6</strong>
-      <p>Lunches</p>
-    </div>
-    <div class="meal-item">
-      <span class="meal-icon">🌙</span>
-      <strong>6</strong>
-      <p>Dinners</p>
-    </div>
-    <div class="meal-item">
-      <span class="meal-icon">🥂</span>
-      <strong>+1</strong>
-      <p>Welcome dinner on arrival night</p>
+<section class="retreat-section retreat-section--dark reveal">
+  <div class="retreat-container retreat-center">
+    <span class="retreat-label retreat-label--light">Nourishment</span>
+    <h2 class="retreat-h2 retreat-h2--light">Healthy Food Every Day</h2>
+    <p class="retreat-p retreat-p--light" style="max-width:520px; margin:0 auto 1.5rem;">All meals prepared by our private chef using fresh, nourishing ingredients inspired by the vibrant flavors of Costa Rica.</p>
+    <div class="retreat-meals-counts">
+      <div class="retreat-meal-item"><span class="retreat-meal-icon">🌅</span><strong>7</strong><p>Breakfasts</p></div>
+      <div class="retreat-meal-item"><span class="retreat-meal-icon">☀️</span><strong>6</strong><p>Lunches</p></div>
+      <div class="retreat-meal-item"><span class="retreat-meal-icon">🌙</span><strong>6</strong><p>Dinners</p></div>
+      <div class="retreat-meal-item"><span class="retreat-meal-icon">🥂</span><strong>+1</strong><p>Welcome dinner</p></div>
     </div>
   </div>
-  <div class="meals-photos">
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.33.56 PM.jpeg" alt="Healthy breakfast prepared by private chef" />
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.35.51 PM.jpeg" alt="Group lunch at Isla Tortuga" />
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.35.35 PM.jpeg" alt="Fresh food at the retreat" />
+  <div class="retreat-meals-photos">
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.33.56%20PM.jpeg" alt="Healthy breakfast prepared by private chef" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.35.51%20PM.jpeg" alt="Group lunch at Isla Tortuga" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.35.35%20PM.jpeg" alt="Fresh food at the retreat" />
   </div>
 </section>
 
 <!-- FOR WHO -->
-<section class="for-who">
-  <div class="for-who-inner">
+<section class="retreat-section retreat-section--sand reveal">
+  <div class="retreat-for-who-inner">
     <div>
-      <span class="section-label">Is This For You?</span>
-      <h2>Who Is This Retreat For?</h2>
-      <p>This experience is open to everyone 18+. No experience needed — in surfing, yoga or anything else.</p>
-      <ul class="for-who-list">
+      <span class="retreat-label">Is This For You?</span>
+      <h2 class="retreat-h2">Who Is This Trip For?</h2>
+      <p class="retreat-p">Open to everyone 18+. No experience needed — in surfing, yoga or anything else.</p>
+      <ul class="retreat-for-who-list">
         <li>You want to explore Costa Rica authentically</li>
         <li>You want to learn to surf or improve your skills</li>
         <li>You want to practice yoga in nature</li>
@@ -634,140 +469,159 @@ footer { background: var(--deep); padding: 3rem 2.5rem; display: flex; justify-c
         <li>You're open to new experiences and community</li>
       </ul>
     </div>
-    <img src="assets/img/WhatsApp Image 2026-07-16 at 3.37.58 PM.jpeg" alt="The group at Isla Tortuga" class="for-who-img" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.37.58%20PM.jpeg" alt="The group at Isla Tortuga" class="retreat-for-who-img" />
   </div>
 </section>
 
 <!-- PRICING -->
-<section class="pricing" id="pricing">
-  <span class="section-label">Investment</span>
-  <h2>Reserve Your Spot</h2>
-  <p class="pricing-sub">Only 8 places available.</p>
-  <div class="pricing-cards">
-    <div class="price-card featured">
-      <span class="price-badge">Early Bird — Save $200</span>
-      <span class="price-tag">Early Bird Price</span>
-      <div class="price-amount">$1,500</div>
-      <p class="price-period">per person</p>
-      <p class="price-deadline">Available until September 15, 2026</p>
-      <ul class="price-details">
-        <li>7 nights accommodation</li>
-        <li>All meals included</li>
-        <li>All activities & excursions</li>
-        <li>Welcome gift</li>
-        <li>$500 deposit to reserve</li>
-      </ul>
-      <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20reserve%20my%20spot%20for%20the%20SupAventura%20Retreat%20in%20December%202026." class="btn btn-warm" target="_blank">Reserve Now →</a>
+<section class="retreat-section retreat-section--cream reveal" id="pricing">
+  <div class="retreat-container retreat-center">
+    <span class="retreat-label">Investment</span>
+    <h2 class="retreat-h2">Reserve Your Spot</h2>
+    <p class="retreat-p">Only 8 places available.</p>
+    <div class="retreat-pricing-cards">
+      <div class="retreat-price-card featured">
+        <span class="retreat-price-badge">Early Bird — Save $200</span>
+        <span class="retreat-price-tag">Early Bird Price</span>
+        <div class="retreat-price-amount">$1,500</div>
+        <p class="retreat-price-period">per person</p>
+        <p class="retreat-price-deadline">Available until September 15, 2026</p>
+        <ul class="retreat-price-details">
+          <li>7 nights beachfront accommodation</li>
+          <li>All meals included</li>
+          <li>All activities &amp; excursions</li>
+          <li>Welcome gift</li>
+          <li>$500 deposit to reserve</li>
+        </ul>
+        <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20reserve%20my%20spot%20for%20the%20Costa%20Rica%20Surf%20%26%20Adventure%20trip%20in%20December%202026." class="btn btn-primary" target="_blank">Reserve Now →</a>
+      </div>
+      <div class="retreat-price-card">
+        <span class="retreat-price-tag">Regular Price</span>
+        <div class="retreat-price-amount">$1,700</div>
+        <p class="retreat-price-period">per person</p>
+        <p class="retreat-price-deadline">After September 15, 2026</p>
+        <ul class="retreat-price-details">
+          <li>7 nights beachfront accommodation</li>
+          <li>All meals included</li>
+          <li>All activities &amp; excursions</li>
+          <li>Welcome gift</li>
+          <li>$500 deposit to reserve</li>
+        </ul>
+        <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20the%20Costa%20Rica%20Surf%20%26%20Adventure%20trip." class="btn btn-outline" target="_blank">Ask on WhatsApp</a>
+      </div>
     </div>
-    <div class="price-card">
-      <span class="price-tag">Regular Price</span>
-      <div class="price-amount">$1,700</div>
-      <p class="price-period">per person</p>
-      <p class="price-deadline">After September 15, 2026</p>
-      <ul class="price-details">
-        <li>7 nights accommodation</li>
-        <li>All meals included</li>
-        <li>All activities & excursions</li>
-        <li>Welcome gift</li>
-        <li>$500 deposit to reserve</li>
-      </ul>
-      <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20the%20SupAventura%20Retreat." class="btn btn-outline" target="_blank">Ask on WhatsApp</a>
-    </div>
+    <p class="retreat-pricing-note">Reserve your place with a $500 deposit. Payment plans available. Balance due before arrival.</p>
+    <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20reserve%20my%20spot%20for%20the%20Costa%20Rica%20Surf%20%26%20Adventure%20trip." class="btn btn-primary" target="_blank">Reserve via WhatsApp</a>
   </div>
-  <p class="pricing-note">Reserve your place with a $500 deposit. Payment plans available. Balance due before arrival.</p>
-  <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20reserve%20my%20spot%20for%20the%20SupAventura%20Retreat%20in%20December%202026." class="btn btn-wa" target="_blank">Reserve via WhatsApp</a>
 </section>
 
-<!-- OPTIONAL ACTIVITIES -->
-<section class="optionals">
+<!-- OPTIONALS -->
+<section class="retreat-optionals">
   <p><strong>Optional extras (not included):</strong> Surfskate lessons · Massage sessions · Reiki sessions — ask us for details.</p>
 </section>
 
 <!-- FAQ -->
-<section class="faq" id="faq">
-  <div class="faq-inner">
-    <span class="section-label">Questions</span>
-    <h2>FAQ</h2>
-
-    <div class="faq-item">
-      <div class="faq-q">Do I need yoga or surf experience? <span class="faq-toggle">+</span></div>
-      <div class="faq-a">No experience needed at all — not in yoga, surfing or anything else. Our instructors adapt to every level, from complete beginners to those with some experience. Just bring an open mind.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Can I travel alone? <span class="faq-toggle">+</span></div>
-      <div class="faq-a">Absolutely — most of our guests travel solo! You'll arrive as a stranger and leave with new friends. Community is at the heart of the SupAventura experience.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What's included in the price? <span class="faq-toggle">+</span></div>
-      <div class="faq-a">Everything is included: 7 nights accommodation at Zeneidas Beach House, all meals (7 breakfasts, 6 lunches, 7 dinners + welcome dinner), 4 surf lessons with video analysis, Isla Tortuga boat trip, bioluminescence experience, ATV waterfall adventure, yoga sessions, SUP yoga, sound healing, cacao ceremony, new moon ritual, welcome gift, and all local transportation to activities.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What airport should I fly into? <span class="faq-toggle">+</span></div>
-      <div class="faq-a">Fly into San José (SJO — Juan Santamaría International Airport). From there you have two options: a small plane (avioneta) to Cobano + taxi to the house, or a shuttle + ferry that drops you right at the door of Zeneidas. We'll help you coordinate your arrival.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How do I get to Santa Teresa? <span class="faq-toggle">+</span></div>
-      <div class="faq-a">From San José you can take a small plane (avioneta) to Cobano (~30 min) and then a short taxi to Zeneidas, or take a shuttle + ferry from San José that arrives right at the house. Both options are comfortable — we'll send you full details once you reserve.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What are the accommodations like? <span class="faq-toggle">+</span></div>
-      <div class="faq-a">You'll stay at Zeneidas Beach House, a beautiful beachfront property surrounded by jungle. The house has 3 rooms with bunk beds (one room for 2 with A/C, one for 4 with A/C, and one for 2 with fan and ocean view), a shared bathroom, full kitchen, and common areas. Note: the house may also have other Zeneidas Garden guests outside the retreat group.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How do I reserve my spot? <span class="faq-toggle">+</span></div>
-      <div class="faq-a">Message us on WhatsApp to reserve your spot. A $500 deposit confirms your place. Payment plans are available — ask us and we'll find a solution that works for you. Balance is due before arrival.</div>
-    </div>
+<section class="retreat-section retreat-section--sand reveal" id="faq">
+  <div class="retreat-container" style="max-width:760px;">
+    <span class="retreat-label">Questions</span>
+    <h2 class="retreat-h2">FAQ</h2>
+    <div class="retreat-faq-item"><div class="retreat-faq-q">Do I need yoga or surf experience? <span class="retreat-faq-toggle">+</span></div><div class="retreat-faq-a">No experience needed at all. Our instructors adapt to every level, from complete beginners to those with some experience. Just bring an open mind.</div></div>
+    <div class="retreat-faq-item"><div class="retreat-faq-q">Can I travel alone? <span class="retreat-faq-toggle">+</span></div><div class="retreat-faq-a">Absolutely — most of our guests travel solo! You'll arrive as a stranger and leave with new friends. Community is at the heart of the SupAventura experience.</div></div>
+    <div class="retreat-faq-item"><div class="retreat-faq-q">What's included in the price? <span class="retreat-faq-toggle">+</span></div><div class="retreat-faq-a">Everything: 7 nights accommodation, all meals (7 breakfasts, 6 lunches, 6 dinners + welcome dinner), 4 surf lessons with video analysis, Isla Tortuga boat trip, bioluminescence, ATV waterfall adventure, yoga sessions, SUP yoga, sound healing, cacao ceremony, new moon ritual, welcome gift, and all local transportation to activities.</div></div>
+    <div class="retreat-faq-item"><div class="retreat-faq-q">What airport should I fly into? <span class="retreat-faq-toggle">+</span></div><div class="retreat-faq-a">Fly into San José (SJO). From there: small plane (avioneta) to Cobano + taxi to the house, or shuttle + ferry that drops you right at the door. We'll help you coordinate your arrival.</div></div>
+    <div class="retreat-faq-item"><div class="retreat-faq-q">What are the accommodations like? <span class="retreat-faq-toggle">+</span></div><div class="retreat-faq-a">A beautiful beachfront house surrounded by jungle. 3 rooms with bunk beds (2 with A/C, 1 with fan and ocean view), shared bathroom, full kitchen and common areas. Note: the house may also have other guests outside the retreat group.</div></div>
+    <div class="retreat-faq-item"><div class="retreat-faq-q">How do I reserve my spot? <span class="retreat-faq-toggle">+</span></div><div class="retreat-faq-a">Message us on WhatsApp. A $500 deposit confirms your place. Payment plans available — just ask. Balance is due before arrival.</div></div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="final-cta">
-  <div class="final-cta-bg"></div>
-  <div class="final-cta-content">
-    <div class="final-words">
-      Adventure.<br><em>Wellness.</em><br>Nature.<br>Connection.
-    </div>
-    <p class="final-sub">Everything you need in one unforgettable week.</p>
-    <div class="final-cta-btns">
-      <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20reserve%20my%20spot%20for%20the%20SupAventura%20Retreat%20in%20December%202026." class="btn btn-warm" target="_blank">Reserve Your Spot</a>
-      <a href="#faq" class="btn btn-ghost">I have questions</a>
+<section class="retreat-final">
+  <div class="retreat-final-bg" style="background-image: url('assets/img/WhatsApp%20Image%202026-07-16%20at%203.40.21%20PM.jpeg');"></div>
+  <div class="retreat-final-overlay"></div>
+  <div class="retreat-final-content">
+    <div class="retreat-final-words">Adventure.<br><em>Wellness.</em><br>Nature.<br>Connection.</div>
+    <p class="retreat-final-sub">Everything you need in one unforgettable week.</p>
+    <div class="retreat-final-btns">
+      <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20reserve%20my%20spot%20for%20the%20Costa%20Rica%20Surf%20%26%20Adventure%20trip." class="btn btn-primary" target="_blank">Reserve Your Spot</a>
+      <a href="#faq" class="btn btn-outline" style="border-color:rgba(250,246,240,0.5); color:#FAF6F0;">I have questions</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <a href="index.html" class="footer-logo">SupAventura</a>
-  <div class="footer-links">
-    <a href="#included">What's Included</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#faq">FAQ</a>
-    <a href="https://instagram.com/supaventura" target="_blank">@supaventura</a>
-    <a href="https://wa.me/50683941825" target="_blank">WhatsApp</a>
+</main>
+
+<!-- FOOTER (same as rest of site) -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="index.html" class="logo-link">
+      <img src="assets/img/juli2..png" alt="SUP Aventura" height="72">
+    </a>
+    <nav class="footer-nav">
+      <a href="yoga.html" data-en="Yoga" data-es="Yoga">Yoga</a>
+      <a href="cacao.html" data-en="Cacao" data-es="Cacao">Cacao</a>
+      <a href="sound-healing.html" data-en="Sound Healing" data-es="Sanación Sonora">Sound Healing</a>
+      <a href="experiences.html" data-en="Experiences" data-es="Experiencias">Experiences</a>
+      <a href="retreats.html" data-en="Retreats" data-es="Retiros">Retreats</a>
+      <a href="index.html#contact" data-en="Contact" data-es="Contacto">Contact</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 SUP Aventura · Santa Teresa, Costa Rica</p>
   </div>
-  <p class="footer-copy">© 2026 SupAventura · Santa Teresa, Costa Rica</p>
 </footer>
 
-<!-- FLOATING WA -->
-<a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20the%20SupAventura%20Retreat." class="wa-float" target="_blank" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+<!-- FLOATING BOTTOM NAV -->
+<nav class="bottom-nav" id="bottomNav" aria-label="Quick booking">
+  <a href="yoga.html" class="bottom-nav-item"><span class="nav-icon">🧘‍♀️</span><span>Yoga</span></a>
+  <a href="experiences.html" class="bottom-nav-item"><span class="nav-icon">🌊</span><span>Surf</span></a>
+  <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20reserve%20my%20spot%20for%20the%20Costa%20Rica%20Surf%20%26%20Adventure%20trip." class="bottom-nav-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="retreats.html" class="bottom-nav-item"><span class="nav-icon">🌿</span><span>Retreat</span></a>
+  <a href="index.html#contact" class="bottom-nav-item"><span class="nav-icon">📍</span><span>Contact</span></a>
+</nav>
 
 <script>
-// Nav scroll
-const nav = document.getElementById('siteNav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
+(function() {
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 60) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  }, { passive: true });
 
-// FAQ accordion
-document.querySelectorAll('.faq-item').forEach(item => {
-  item.querySelector('.faq-q').addEventListener('click', () => {
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+  setTimeout(function() { document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('visible'); }); }, 1200);
+
+  var nav = document.getElementById('bottomNav');
+  if (nav) {
+    var hideTimer = setTimeout(function() { nav.classList.add('hidden'); }, 6000);
+    function showNav() { nav.classList.remove('hidden'); clearTimeout(hideTimer); hideTimer = setTimeout(function() { nav.classList.add('hidden'); }, 6000); }
+    window.addEventListener('scroll', showNav, { passive: true });
+  }
+
+  // FAQ
+  document.querySelectorAll('.retreat-faq-item').forEach(function(item) {
+    item.querySelector('.retreat-faq-q').addEventListener('click', function() {
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.retreat-faq-item').forEach(function(i) { i.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    });
   });
-});
+
+  // Lang toggle
+  const savedLang = localStorage.getItem('lang') || 'en';
+  document.getElementById('langToggle').textContent = savedLang === 'en' ? 'ES' : 'EN';
+  document.getElementById('langToggle').addEventListener('click', function() {
+    const current = localStorage.getItem('lang') || 'en';
+    const next = current === 'en' ? 'es' : 'en';
+    localStorage.setItem('lang', next);
+    this.textContent = next === 'en' ? 'ES' : 'EN';
+  });
+})();
 </script>
+
 </body>
 </html>
