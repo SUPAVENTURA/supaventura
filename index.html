@@ -108,8 +108,8 @@
       <h2 data-en="Costa Rica Surf &amp; Adventure Experience" data-es="Costa Rica Surf &amp; Adventure Experience">Costa Rica Surf &amp; Adventure Experience</h2>
       <p data-en="7 days of surf, yoga, jungle adventures, ocean moments and connection in Santa Teresa. Only 8 spots available." data-es="7 días de surf, yoga, aventuras en la jungla, océano y conexión en Santa Teresa. Solo 8 lugares disponibles.">7 days of surf, yoga, jungle adventures, ocean moments and connection in Santa Teresa. Only 8 spots available.</p>
       <div class="cr-banner-btns">
-        <a href="costa-rica-2026.html" class="btn btn-primary" data-en="Discover Costa Rica 2026 →" data-es="Conocé el viaje →">Discover Costa Rica 2026 →</a>
-        <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20Costa%20Rica%20Surf%20%26%20Adventure%202026." class="btn btn-whatsapp" target="_blank" data-en="Ask on WhatsApp" data-es="Consultar por WhatsApp">Ask on WhatsApp</a>
+        <a href="costa-rica-2026.html" class="btn btn-primary" id="bannerBtn1">Discover Costa Rica 2026 →</a>
+        <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20Costa%20Rica%20Surf%20%26%20Adventure%202026." class="btn btn-whatsapp" target="_blank" id="bannerBtn2">Ask on WhatsApp</a>
       </div>
     </div>
     <div class="cr-banner-img">
@@ -400,6 +400,11 @@
       el.textContent = el.dataset[lang];
     });
     document.getElementById('langToggle').textContent = lang === 'en' ? 'ES' : 'EN';
+    // Banner buttons
+    var btn1 = document.getElementById('bannerBtn1');
+    var btn2 = document.getElementById('bannerBtn2');
+    if (btn1) btn1.textContent = lang === 'en' ? 'Discover Costa Rica 2026 →' : 'Conocé el viaje →';
+    if (btn2) btn2.textContent = lang === 'en' ? 'Ask on WhatsApp' : 'Consultar por WhatsApp';
   }
 })();
 </script>
