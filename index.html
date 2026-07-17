@@ -10,8 +10,61 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/styles.css" />
+<style>
+/* COSTA RICA 2026 BANNER */
+.cr-banner {
+  background: var(--earth);
+  padding: 4rem 1.5rem;
+}
+.cr-banner-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.cr-banner-text .section-label { color: var(--orange-lt); }
+.cr-banner-text h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: var(--cream);
+  margin: 0.5rem 0 1rem;
+  font-weight: 300;
+}
+.cr-banner-text p {
+  color: rgba(250,246,240,0.75);
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 1;
+  margin-bottom: 0;
+}
+.cr-banner-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.cr-banner-img {
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+  border-radius: 2px;
+}
+.cr-banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+@media (max-width: 768px) {
+  .cr-banner-inner { grid-template-columns: 1fr; }
+  .cr-banner-img { height: 220px; }
+}
+</style>
 </head>
 <body>
+
 <header class="site-header" id="siteHeader">
 <div class="container header-inner">
 <a href="index.html" class="logo-link">
@@ -21,17 +74,17 @@
 <a href="yoga.html" data-en="Yoga" data-es="Yoga">Yoga</a>
 <a href="cacao.html" data-en="Cacao" data-es="Cacao">Cacao</a>
 <a href="sound-healing.html" data-en="Sound Healing" data-es="Sanación Sonora">Sound Healing</a>
+<a href="costa-rica-2026.html" data-en="Costa Rica 2026" data-es="Costa Rica 2026" style="color: var(--orange); font-weight:500;">Costa Rica 2026</a>
 </nav>
 <div class="header-actions">
-<a href="https://wa.me/50683941825?text=Hi%20Juli!%20I'd%20like%20to%20know%20more%20about%20your%20experiences." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" data-en="WhatsApp" data-es="WhatsApp">
-WhatsApp
-</a>
+<a href="https://wa.me/50683941825?text=Hi%20Juli!%20I'd%20like%20to%20know%20more%20about%20your%20experiences." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" data-en="WhatsApp" data-es="WhatsApp">WhatsApp</a>
 <button class="lang-toggle" id="langToggle">ES</button>
 </div>
 </div>
 </header>
 
 <main>
+
 <!-- HERO -->
 <section class="hero">
 <div class="hero-bg" style="background-image: url('assets/img/WhatsApp Image 2026-06-18 at 17.04.36.jpeg');"></div>
@@ -47,6 +100,24 @@ WhatsApp
 </div>
 </section>
 
+<!-- COSTA RICA 2026 BANNER -->
+<section class="cr-banner sa-reveal">
+  <div class="cr-banner-inner">
+    <div class="cr-banner-text">
+      <span class="mono section-label" data-en="Coming December 2026 🌴" data-es="Próximo viaje · Diciembre 2026 🌴">Coming December 2026 🌴</span>
+      <h2 data-en="Costa Rica Surf &amp; Adventure Experience" data-es="Costa Rica Surf &amp; Adventure Experience">Costa Rica Surf &amp; Adventure Experience</h2>
+      <p data-en="7 days of surf, yoga, jungle adventures, ocean moments and connection in Santa Teresa. Only 8 spots available." data-es="7 días de surf, yoga, aventuras en la jungla, océano y conexión en Santa Teresa. Solo 8 lugares disponibles.">7 days of surf, yoga, jungle adventures, ocean moments and connection in Santa Teresa. Only 8 spots available.</p>
+      <div class="cr-banner-btns">
+        <a href="costa-rica-2026.html" class="btn btn-primary" data-en="Discover Costa Rica 2026 →" data-es="Conocé el viaje →">Discover Costa Rica 2026 →</a>
+        <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20Costa%20Rica%20Surf%20%26%20Adventure%202026." class="btn btn-whatsapp" target="_blank" data-en="Ask on WhatsApp" data-es="Consultar por WhatsApp">Ask on WhatsApp</a>
+      </div>
+    </div>
+    <div class="cr-banner-img">
+      <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%202.54.11%20PM.jpeg" alt="Costa Rica Surf & Adventure December 2026" />
+    </div>
+  </div>
+</section>
+
 <!-- 4 CORE EXPERIENCES -->
 <section class="experiences-section sa-reveal" id="experiences">
 <div class="container">
@@ -56,7 +127,6 @@ WhatsApp
 
 <div class="exp-grid">
 
-<!-- Beach Yoga -->
 <div class="exp-card sa-reveal">
 <div class="exp-card-img">
 <img src="assets/img/prtivate and group yoga.jpeg" alt="Beach yoga session in Santa Teresa" loading="lazy" />
@@ -74,7 +144,6 @@ WhatsApp
 </div>
 </div>
 
-<!-- Cacao + Sound -->
 <div class="exp-card sa-reveal sa-reveal-delay-1">
 <div class="exp-card-img">
 <img src="assets/img/WhatsApp Image 2026-06-19 at 13.37.23.jpeg" alt="Cacao ceremony and sound healing session" loading="lazy" />
@@ -92,7 +161,6 @@ WhatsApp
 </div>
 </div>
 
-<!-- Sound Healing + Oracle -->
 <div class="exp-card sa-reveal sa-reveal-delay-2">
 <div class="exp-card-img">
 <img src="assets/img/WhatsApp Image 2026-06-19 at 13.25.47.jpeg" alt="Sound healing ceremony at sunset" loading="lazy" />
@@ -110,7 +178,6 @@ WhatsApp
 </div>
 </div>
 
-<!-- Cacao: From Plant to Ceremony -->
 <div class="exp-card sa-reveal sa-reveal-delay-3">
 <div class="exp-card-img">
 <img src="assets/img/WhatsApp Image 2026-06-26 at 11.43.22 AM.jpeg" alt="Cacao: From Plant to Ceremony" loading="lazy" />
@@ -128,7 +195,7 @@ WhatsApp
 </div>
 </div>
 
-</div><!-- end exp-grid -->
+</div>
 
 <p class="exp-location-note" data-en="📍 All sessions available on the beach, yoga deck, or at your villa · Transportation costs may apply depending on location." data-es="📍 Todas las sesiones disponibles en la playa, en los decks de yoga o en tu villa · Pueden aplicar costos de transporte según la ubicación.">📍 All sessions available on the beach, yoga deck, or at your villa · Transportation costs may apply depending on location.</p>
 <div class="also-available">
@@ -235,6 +302,7 @@ WhatsApp
 </div>
 </div>
 </section>
+
 </main>
 
 <footer class="site-footer">
@@ -247,7 +315,7 @@ WhatsApp
 <a href="cacao.html" data-en="Cacao" data-es="Cacao">Cacao</a>
 <a href="sound-healing.html" data-en="Sound Healing" data-es="Sanación Sonora">Sound Healing</a>
 <a href="experiences.html" data-en="Experiences" data-es="Experiencias">Experiences</a>
-<a href="retreats.html" data-en="Retreats" data-es="Retiros">Retreats</a>
+<a href="costa-rica-2026.html" data-en="Costa Rica 2026" data-es="Costa Rica 2026">Costa Rica 2026</a>
 <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
 </nav>
 <p class="footer-copy">&copy; 2026 SUP Aventura · Santa Teresa, Costa Rica</p>
@@ -267,9 +335,9 @@ WhatsApp
 <a href="https://wa.me/50683941825?text=Hi%20Juli!%20I'd%20like%20to%20know%20more%20about%20your%20experiences." class="bottom-nav-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Juli">
 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
-<a href="https://wa.me/50683941825?text=Hi%20Juli!%20I'd%20like%20to%20book%20a%20Sound%20Healing%20%2B%20Oracle%20session." class="bottom-nav-item" target="_blank" rel="noopener noreferrer">
-<span class="nav-icon">🔔</span>
-<span data-en="Sound" data-es="Sonido">Sound</span>
+<a href="costa-rica-2026.html" class="bottom-nav-item">
+<span class="nav-icon">🌴</span>
+<span data-en="CR 2026" data-es="CR 2026">CR 2026</span>
 </a>
 </nav>
 
@@ -320,14 +388,12 @@ WhatsApp
 (function() {
   const savedLang = localStorage.getItem('lang') || 'en';
   applyLang(savedLang);
-
   document.getElementById('langToggle').addEventListener('click', function() {
     const current = localStorage.getItem('lang') || 'en';
     const next = current === 'en' ? 'es' : 'en';
     localStorage.setItem('lang', next);
     applyLang(next);
   });
-
   function applyLang(lang) {
     document.querySelectorAll('[data-en]').forEach(el => {
       if (el.tagName === 'A' || el.querySelector('a')) return;
