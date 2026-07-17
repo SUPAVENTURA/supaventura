@@ -15,7 +15,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://supaventura.com/costa-rica-2026.html" />
 <meta property="og:title" content="Women's Surf & Adventure Retreat in Costa Rica | December 2026" />
-<meta property="og:description" content="7 days of surf, yoga, Isla Tortuga, waterfalls and real connection in Santa Teresa, Costa Rica. Small group of women — only 8 spots. Early Bird $1,500." />
+<meta property="og:description" content="7 días de surf, yoga, Isla Tortuga, cascadas y conexión real en Santa Teresa, Costa Rica. Grupo pequeño de mujeres — solo 8 lugares. Early Bird $1,500." />
 <meta property="og:image" content="https://supaventura.com/assets/img/WhatsApp%20Image%202026-07-16%20at%202.54.11%20PM.jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -67,7 +67,7 @@
     },
     {
       "@type": "Offer",
-      "name": "Regular Price",
+      "name": "Precio Regular",
       "price": "1700",
       "priceCurrency": "USD",
       "availability": "https://schema.org/LimitedAvailability",
@@ -173,8 +173,8 @@
 
 /* HOUSE */
 .cr-house { display: grid; grid-template-columns: 1fr 1fr; }
-.cr-house-gallery { display: grid; grid-template-rows: 1fr 1fr; }
-.cr-house-gallery img { width: 100%; height: 300px; object-fit: cover; display: block; }
+.cr-house-gallery { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
+.cr-house-gallery img { width: 100%; height: 260px; object-fit: cover; display: block; }
 .cr-house-text { padding: 4.5rem 3.5rem; background: var(--sand); display: flex; flex-direction: column; justify-content: center; }
 .cr-room-list { margin: 1rem 0; }
 .cr-room-item { display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0; border-bottom: 1px solid rgba(61,43,31,0.1); font-size: 0.9rem; color: var(--cacao); }
@@ -250,15 +250,15 @@
       <img src="assets/img/juli2..png" alt="SUP Aventura" height="52">
     </a>
     <nav class="site-nav">
-      <a href="yoga.html" data-en="Yoga" data-es="Yoga">Yoga</a>
-      <a href="cacao.html" data-en="Cacao" data-es="Cacao">Cacao</a>
-      <a href="sound-healing.html" data-en="Sound Healing" data-es="Sanación Sonora">Sound Healing</a>
-      <a href="experiences.html" data-en="Experiences" data-es="Experiencias">Experiences</a>
-      <a href="costa-rica-2026.html" data-en="Costa Rica 2026" data-es="Costa Rica 2026" style="color: var(--orange); font-weight:500;">Costa Rica 2026</a>
+      <a href="yoga.html">Yoga</a>
+      <a href="cacao.html">Cacao</a>
+      <a href="sound-healing.html">Sanación Sonora</a>
+      <a href="experiences.html">Experiencias</a>
+      <a href="costa-rica-2026.html" style="color: var(--orange); font-weight:500;">Costa Rica 2026</a>
     </nav>
     <div class="header-actions">
-      <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20Costa%20Rica%20Surf%20%26%20Adventure%202026." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" data-en="WhatsApp" data-es="WhatsApp">WhatsApp</a>
-      
+      <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20Costa%20Rica%20Surf%20%26%20Adventure%202026." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <button class="lang-toggle" id="langToggle">EN</button>
     </div>
   </div>
 </header>
@@ -270,37 +270,40 @@
   <div class="cr-hero-bg" style="background-image: url('assets/img/WhatsApp%20Image%202026-07-16%20at%202.54.11%20PM.jpeg');"></div>
   <div class="cr-hero-overlay"></div>
   <div class="cr-hero-content">
-    <span class="cr-eyebrow" data-en="SUP Aventura presents" data-es="SUP Aventura presenta">SUP Aventura presents</span>
+    <span class="cr-eyebrow">SUP Aventura presenta</span>
     <h1 class="cr-title">Costa Rica</h1>
-    <p class="cr-title-sub" data-en="Surf &amp; Adventure" data-es="Surf &amp; Aventura">Surf &amp; Adventure</p>
-    <p class="cr-date">December 5–12, 2026</p>
+    <p class="cr-title-sub">Surf &amp; Aventura</p>
+    <p class="cr-date">5–12 de diciembre 2026</p>
     <p class="cr-place">Santa Teresa · Costa Rica</p>
-    <p class="cr-tags" data-en="Surf · Yoga · Adventure · Cacao · Ocean · Friendship" data-es="Surf · Yoga · Aventura · Cacao · Océano · Amigas">Surf · Yoga · Adventure · Cacao · Ocean · Friendship</p>
-    <p class="cr-hero-p" data-en="A 7-day small group experience for women who want more than a vacation. Surf, explore Costa Rica, reconnect with yourself and create unforgettable memories with an amazing group of women." data-es="Una experiencia de 7 días para mujeres que buscan más que unas vacaciones. Surfeá, explorá Costa Rica, reconectá con vos misma y creá recuerdos inolvidables con un grupo increíble.">A 7-day small group experience for women who want more than a vacation. Surf, explore Costa Rica, reconnect with yourself and create unforgettable memories with an amazing group of women.</p>
-    <p class="cr-spots" data-en="Only 8 spots available." data-es="Solo 8 lugares disponibles.">Only 8 spots available.</p>
+    <p class="cr-tags">Surf · Yoga · Aventura · Cacao · Océano · Amigas</p>
+    <p class="cr-hero-p">Una experiencia de 7 días para mujeres que buscan más que unas vacaciones. Surfeá, explorá Costa Rica, reconectá con vos misma y creá recuerdos inolvidables con un grupo increíble.</p>
+    <p class="cr-spots">Solo 8 lugares disponibles.</p>
     <div class="cr-ctas">
-      <a href="#pricing" class="btn btn-primary" data-en="Reserve Your Spot" data-es="Reservá tu lugar" id="heroBtn1">Reserve Your Spot</a>
-      <a href="#experience" class="btn btn-outline" data-en="Explore The Experience ↓" data-es="Conocé la experiencia ↓" id="heroBtn2">Explore The Experience ↓</a>
+      <a href="#pricing" class="btn btn-primary" id="heroBtn1">Reservá tu lugar</a>
+      <a href="#experience" class="btn btn-outline" id="heroBtn2">Conocé la experiencia ↓</a>
     </div>
   </div>
 </section>
 
 <!-- INFO BAR -->
 <div class="cr-info-bar">
-  <div class="cr-info-item"><span>📍</span><span data-en="Santa Teresa, Costa Rica" data-es="Santa Teresa, Costa Rica">Santa Teresa, Costa Rica</span></div>
-  <div class="cr-info-item"><span>📅</span><span data-en="Dec 5–12, 2026" data-es="5–12 dic 2026">Dec 5–12, 2026</span></div>
-  <div class="cr-info-item"><span>⏳</span><span data-en="7 days / 7 nights" data-es="7 días / 7 noches">7 days / 7 nights</span></div>
-  <div class="cr-info-item"><span>🧘</span><span data-en="All levels welcome" data-es="Todos los niveles">All levels welcome</span></div>
-  <div class="cr-info-item"><span>🍽️</span><span data-en="All meals included" data-es="Todas las comidas incluidas">All meals included</span></div>
+  <div class="cr-info-item"><span>📍</span><span>Santa Teresa, Costa Rica</span></div>
+  <div class="cr-info-item"><span>📅</span><span>5–12 dic 2026</span></div>
+  <div class="cr-info-item"><span>⏳</span><span>7 días / 7 noches</span></div>
+  <div class="cr-info-item"><span>🧘</span><span>Todos los niveles</span></div>
+  <div class="cr-info-item"><span>🍽️</span><span>Todas las comidas incluidas</span></div>
 </div>
 
 <!-- MORE THAN A VACATION -->
 <section class="cr-section cr-section--cream reveal" id="experience">
   <div class="cr-more-inner cr-center">
-    <span class="cr-label" data-en="The Experience" data-es="La experiencia">The Experience</span>
-    <h2 class="cr-h2" data-en="More Than a Vacation" data-es="Más que unas vacaciones">More Than a Vacation</h2>
-    <p class="cr-p" data-en="This is not just a surf trip. It is a week created to disconnect from routine, reconnect with yourself, explore the magic of Santa Teresa and share unforgettable moments with a small group of women." data-es="No es solo un surf trip. Es una semana creada para desconectar de la rutina, reconectar con vos misma, descubrir la magia de Santa Teresa y compartir momentos inolvidables con un grupo pequeño de mujeres.">This is not just a surf trip. It is a week created to disconnect from routine, reconnect with yourself, explore the magic of Santa Teresa and share unforgettable moments with a small group of women.</p>
-    <p class="cr-p" data-en="Come alone or with friends. Many guests arrive without knowing anyone and leave with friendships that last beyond the trip." data-es="Podés venir sola o con amigas. Muchas llegan sin conocer a nadie y se van con amistades que duran más allá del viaje.">Come alone or with friends. Many guests arrive without knowing anyone and leave with friendships that last beyond the trip.</p>
+    <span class="cr-label">La experiencia</span>
+    <h2 class="cr-h2">Más que unas vacaciones</h2>
+    <p class="cr-p">No es solo un surf trip. Es una semana creada para desconectar de la rutina, reconectar con vos misma, descubrir la magia de Santa Teresa y compartir momentos inolvidables con un grupo pequeño de mujeres.</p>
+    <p class="cr-p">Podés venir sola o con amigas. Muchas llegan sin conocer a nadie y se van con amistades que duran más allá del viaje.</p>
+  </div>
+  <div style="max-width:900px; margin: 2.5rem auto 0; overflow:hidden; border-radius:2px;">
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%203.40.21%20PM.jpeg" alt="Women's surf retreat group — Santa Teresa Costa Rica" style="width:100%; height:480px; object-fit:cover; object-position: center top; display:block;" loading="lazy" />
   </div>
 </section>
 
@@ -308,25 +311,25 @@
 <section class="cr-section cr-section--sand reveal">
   <div class="cr-container">
     <div class="cr-center">
-      <span class="cr-label" data-en="Why Us" data-es="Por qué elegirnos">Why Us</span>
-      <h2 class="cr-h2" data-en="Why This Experience Is Different" data-es="Lo que hace diferente esta experiencia">Why This Experience Is Different</h2>
+      <span class="cr-label">Por qué elegirnos</span>
+      <h2 class="cr-h2">Lo que hace diferente esta experiencia</h2>
     </div>
     <div class="cr-why-grid">
       <div class="cr-why-card">
-        <h3 data-en="👥 Small group, real connection" data-es="👥 Grupo pequeño, conexión real">👥 Small group, real connection</h3>
-        <p data-en="Only 8 participants. No mass tourism. A personal experience where everyone becomes part of the adventure." data-es="Solo 8 participantes. Sin turismo masivo. Una experiencia personal donde todas forman parte de la aventura.">Only 8 participants. No mass tourism. A personal experience where everyone becomes part of the adventure.</p>
+        <h3>👥 Grupo pequeño, conexión real</h3>
+        <p>Solo 8 participantes. Sin turismo masivo. Una experiencia personal donde todas forman parte de la aventura.</p>
       </div>
       <div class="cr-why-card">
-        <h3 data-en="🌴 A local experience in Santa Teresa" data-es="🌴 Una experiencia local en Santa Teresa">🌴 A local experience in Santa Teresa</h3>
-        <p data-en="You are not just visiting Costa Rica. You are experiencing it through Juli's connection with the place." data-es="No solamente visitás Costa Rica. La vivís desde la conexión de Juli con el lugar.">You are not just visiting Costa Rica. You are experiencing it through Juli's connection with the place.</p>
+        <h3>🌴 Una experiencia local en Santa Teresa</h3>
+        <p>No solamente visitás Costa Rica. La vivís desde la conexión de Juli con el lugar.</p>
       </div>
       <div class="cr-why-card">
-        <h3 data-en="⚡ Adventure with balance" data-es="⚡ Aventura con equilibrio">⚡ Adventure with balance</h3>
-        <p data-en="Surf, jungle, ocean, movement and wellness. The perfect combination of adventure and moments to slow down." data-es="Surf, jungla, océano, movimiento y bienestar. La combinación perfecta entre aventura y momentos para disfrutar.">Surf, jungle, ocean, movement and wellness. The perfect combination of adventure and moments to slow down.</p>
+        <h3>⚡ Aventura con equilibrio</h3>
+        <p>Surf, jungla, océano, movimiento y bienestar. La combinación perfecta entre aventura y momentos para disfrutar.</p>
       </div>
       <div class="cr-why-card">
-        <h3 data-en="🤝 Come alone, leave with friends" data-es="🤝 Venís sola, te vas con amigas">🤝 Come alone, leave with friends</h3>
-        <p data-en="Many women join solo. You arrive knowing nobody and leave with memories and friendships that last." data-es="Muchas mujeres viajan solas. Llegan sin conocer a nadie y se van con recuerdos y amistades que duran.">Many women join solo. You arrive knowing nobody and leave with memories and friendships that last.</p>
+        <h3>🤝 Venís sola, te vas con amigas</h3>
+        <p>Muchas mujeres viajan solas. Llegan sin conocer a nadie y se van con recuerdos y amistades que duran.</p>
       </div>
     </div>
   </div>
@@ -338,11 +341,11 @@
     <div class="cr-juli">
       <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%209.08.03%20PM.jpeg" alt="Juli Kessler — host of women's surf retreat in Santa Teresa Costa Rica" class="cr-juli-img" loading="lazy" />
       <div class="cr-juli-text">
-        <span class="cr-label" data-en="Your Host" data-es="Tu anfitriona">Your Host</span>
-        <h2 class="cr-h2" data-en="Meet Juli" data-es="Conocé a Juli">Meet Juli</h2>
-        <p class="cr-p" data-en="Hi, I'm Juli. I created SUP Aventura because I believe the best experiences are not only about places — they are about people, connection and unforgettable moments." data-es="Hola, soy Juli. Creé SUP Aventura porque creo que las mejores experiencias no son solamente lugares: son personas, conexiones y momentos inolvidables.">Hi, I'm Juli. I created SUP Aventura because I believe the best experiences are not only about places — they are about people, connection and unforgettable moments.</p>
-        <p class="cr-p" data-en="After years living and creating experiences in Santa Teresa, I want to share the magic of this place with a small group of women ready for adventure." data-es="Después de años viviendo y creando experiencias en Santa Teresa, quiero compartir la magia de este lugar con un grupo pequeño de mujeres listas para vivir una aventura.">After years living and creating experiences in Santa Teresa, I want to share the magic of this place with a small group of women ready for adventure.</p>
-        <a href="https://wa.me/50683941825?text=Hi%20Juli!%20I%27d%20like%20to%20know%20more%20about%20Costa%20Rica%202026." class="btn btn-primary" target="_blank" style="margin-top:1rem;" data-en="Message Juli →" data-es="Escribile a Juli →" id="juliBtn">Message Juli →</a>
+        <span class="cr-label">Tu anfitriona</span>
+        <h2 class="cr-h2">Conocé a Juli</h2>
+        <p class="cr-p">Hola, soy Juli. Creé SUP Aventura porque creo que las mejores experiencias no son solamente lugares: son personas, conexiones y momentos inolvidables.</p>
+        <p class="cr-p">Después de años viviendo y creando experiencias en Santa Teresa, quiero compartir la magia de este lugar con un grupo pequeño de mujeres listas para vivir una aventura.</p>
+        <a href="https://wa.me/50683941825?text=Hi%20Juli!%20I%27d%20like%20to%20know%20more%20about%20Costa%20Rica%202026." class="btn btn-primary" target="_blank" style="margin-top:1rem;" id="juliBtn">Escribile a Juli →</a>
       </div>
     </div>
   </div>
@@ -352,8 +355,8 @@
 <section class="cr-section cr-section--earth reveal">
   <div class="cr-container">
     <div class="cr-center">
-      <span class="cr-label cr-label--lt" data-en="The Week" data-es="La semana">The Week</span>
-      <h2 class="cr-h2 cr-h2--lt" data-en="Your Costa Rica Experience" data-es="Tu experiencia en Costa Rica">Your Costa Rica Experience</h2>
+      <span class="cr-label cr-label--lt">La semana</span>
+      <h2 class="cr-h2 cr-h2--lt">Tu experiencia en Costa Rica</h2>
     </div>
     <div class="cr-exp-grid">
       <div class="cr-exp-card">
@@ -361,8 +364,8 @@
         <div class="cr-exp-overlay"></div>
         <div class="cr-exp-text">
           <h3>🌊 Ocean Days</h3>
-          <p class="cr-exp-en" data-en="Surf lessons, sunsets and unforgettable beach moments." data-es="">Surf lessons, sunsets and unforgettable beach moments.</p>
-          <p class="cr-exp-es" data-es="Surf, atardeceres y momentos inolvidables en la playa." data-en=""></p>
+          <p class="cr-exp-en"></p>
+          <p class="cr-exp-es">Surf, atardeceres y momentos inolvidables en la playa.</p>
         </div>
       </div>
       <div class="cr-exp-card">
@@ -370,8 +373,8 @@
         <div class="cr-exp-overlay"></div>
         <div class="cr-exp-text">
           <h3>🌿 Jungle Adventures</h3>
-          <p class="cr-exp-en" data-en="ATV, waterfalls and hidden places." data-es="">ATV, waterfalls and hidden places.</p>
-          <p class="cr-exp-es" data-es="ATV, cascadas y lugares secretos." data-en=""></p>
+          <p class="cr-exp-en"></p>
+          <p class="cr-exp-es">ATV, cascadas y lugares secretos.</p>
         </div>
       </div>
       <div class="cr-exp-card">
@@ -379,8 +382,8 @@
         <div class="cr-exp-overlay"></div>
         <div class="cr-exp-text">
           <h3>🐢 Island Magic</h3>
-          <p class="cr-exp-en" data-en="Isla Tortuga, snorkeling and ocean adventures." data-es="">Isla Tortuga, snorkeling and ocean adventures.</p>
-          <p class="cr-exp-es" data-es="Isla Tortuga, snorkeling y aventuras en el océano." data-en=""></p>
+          <p class="cr-exp-en"></p>
+          <p class="cr-exp-es">Isla Tortuga, snorkeling y aventuras en el océano.</p>
         </div>
       </div>
       <div class="cr-exp-card">
@@ -388,8 +391,8 @@
         <div class="cr-exp-overlay"></div>
         <div class="cr-exp-text">
           <h3>🌙 Mind &amp; Body</h3>
-          <p class="cr-exp-en" data-en="Yoga, cacao ceremony and sound healing." data-es="">Yoga, cacao ceremony and sound healing.</p>
-          <p class="cr-exp-es" data-es="Yoga, cacao ceremonial y sanación sonora." data-en=""></p>
+          <p class="cr-exp-en"></p>
+          <p class="cr-exp-es">Yoga, cacao ceremonial y sanación sonora.</p>
         </div>
       </div>
     </div>
@@ -398,94 +401,96 @@
 
 <!-- MID CTA -->
 <div class="cr-mid-cta reveal">
-  <h2 data-en="Ready to join Costa Rica 2026?" data-es="¿Querés ser parte de Costa Rica 2026?">Ready to join Costa Rica 2026?</h2>
-  <p data-en="Only 8 spots. Early Bird price available until September 15." data-es="Solo 8 lugares. Precio Early Bird disponible hasta el 15 de septiembre.">Only 8 spots. Early Bird price available until September 15.</p>
-  <a href="#pricing" class="btn btn-outline" style="border-color:#fff; color:#fff;" data-en="I Want To Join Costa Rica 2026 →" data-es="Quiero ser parte de Costa Rica 2026 →" id="midBtn">I Want To Join Costa Rica 2026 →</a>
+  <h2>¿Querés ser parte de Costa Rica 2026?</h2>
+  <p>Solo 8 lugares. Precio Early Bird disponible hasta el 15 de septiembre.</p>
+  <a href="#pricing" class="btn btn-outline" style="border-color:#fff; color:#fff;" id="midBtn">Quiero ser parte de Costa Rica 2026 →</a>
 </div>
 
 <!-- INCLUDED -->
 <section class="cr-section cr-section--earth reveal">
   <div class="cr-container">
     <div class="cr-center">
-      <span class="cr-label cr-label--lt" data-en="No surprises" data-es="Sin sorpresas">No surprises</span>
-      <h2 class="cr-h2 cr-h2--lt" data-en="Everything Included For Your Experience" data-es="Todo incluido para vivir la experiencia">Everything Included For Your Experience</h2>
+      <span class="cr-label cr-label--lt">Sin sorpresas</span>
+      <h2 class="cr-h2 cr-h2--lt">Todo incluido para vivir la experiencia</h2>
     </div>
     <div class="cr-included-grid">
-      <div class="cr-included-item"><span class="cr-included-icon">🏠</span><div class="cr-included-text"><strong data-en="7 Nights Beachfront" data-es="7 Noches Frente al Mar">7 Nights Beachfront</strong><span data-en="Beachfront house · ocean views · shared rooms" data-es="Casa frente al mar · vistas al océano · habitaciones compartidas">Beachfront house · ocean views · shared rooms</span></div></div>
-      <div class="cr-included-item"><span class="cr-included-icon">🍽️</span><div class="cr-included-text"><strong data-en="All Meals" data-es="Todas las Comidas">All Meals</strong><span data-en="7 breakfasts · 6 lunches · 6 dinners + welcome dinner" data-es="7 desayunos · 6 almuerzos · 6 cenas + cena de bienvenida">7 breakfasts · 6 lunches · 6 dinners + welcome dinner</span></div></div>
-      <div class="cr-included-item"><span class="cr-included-icon">🏄</span><div class="cr-included-text"><strong data-en="4 Surf Lessons" data-es="4 Clases de Surf">4 Surf Lessons</strong><span data-en="Local instructors · video analysis · all levels" data-es="Instructores locales · video análisis · todos los niveles">Local instructors · video analysis · all levels</span></div></div>
-      <div class="cr-included-item"><span class="cr-included-icon">🧘</span><div class="cr-included-text"><strong data-en="Yoga Sessions" data-es="Clases de Yoga">Yoga Sessions</strong><span data-en="On the beach or the yoga deck" data-es="En la playa o en el deck de yoga">On the beach or the yoga deck</span></div></div>
-      <div class="cr-included-item"><span class="cr-included-icon">🚤</span><div class="cr-included-text"><strong data-en="Isla Tortuga + Bioluminescence" data-es="Isla Tortuga + Bioluminiscencia">Isla Tortuga + Bioluminescence</strong><span data-en="Boat trip · snorkeling · wakeboard · paradise beaches" data-es="Excursión en lancha · snorkel · wakeboard · playas paradisiacas">Boat trip · snorkeling · wakeboard · paradise beaches</span></div></div>
-      <div class="cr-included-item"><span class="cr-included-icon">🏞️</span><div class="cr-included-text"><strong data-en="ATV Waterfall Adventure" data-es="Aventura en ATV a las Cascadas">ATV Waterfall Adventure</strong><span data-en="Montezuma · jungle trails · hidden beaches" data-es="Montezuma · senderos en la jungla · playas escondidas">Montezuma · jungle trails · hidden beaches</span></div></div>
-      <div class="cr-included-item"><span class="cr-included-icon">🏄‍♀️</span><div class="cr-included-text"><strong data-en="SUP Yoga" data-es="SUP Yoga">SUP Yoga</strong><span data-en="Yoga on the water — a unique experience" data-es="Yoga en el agua — una experiencia única">Yoga on the water — a unique experience</span></div></div>
-      <div class="cr-included-item"><span class="cr-included-icon">🔔</span><div class="cr-included-text"><strong data-en="Sound Healing" data-es="Sound Healing">Sound Healing</strong><span data-en="Immersive ceremony with therapeutic instruments" data-es="Ceremonia inmersiva con instrumentos terapéuticos">Immersive ceremony with therapeutic instruments</span></div></div>
-      <div class="cr-included-item"><span class="cr-included-icon">🌿</span><div class="cr-included-text"><strong data-en="Cacao Ceremony" data-es="Ceremonia de Cacao">Cacao Ceremony</strong><span data-en="Heart-opening ceremonial cacao experience" data-es="Experiencia de cacao ceremonial">Heart-opening ceremonial cacao experience</span></div></div>
-      <div class="cr-included-item"><span class="cr-included-icon">🌙</span><div class="cr-included-text"><strong data-en="New Moon Ritual" data-es="Ritual de Luna Nueva">New Moon Ritual</strong><span data-en="A special ceremony to set intentions" data-es="Una ceremonia especial para establecer intenciones">A special ceremony to set intentions</span></div></div>
-      <div class="cr-included-item"><span class="cr-included-icon">🚗</span><div class="cr-included-text"><strong data-en="All Transportation" data-es="Todo el Transporte">All Transportation</strong><span data-en="To and from all activities" data-es="Hacia y desde todas las actividades">To and from all activities</span></div></div>
-      <div class="cr-included-item"><span class="cr-included-icon">🎁</span><div class="cr-included-text"><strong data-en="Welcome Gift" data-es="Regalo de Bienvenida">Welcome Gift</strong><span data-en="A special SupAventura gift waiting for you" data-es="Un regalo especial de SupAventura">A special SupAventura gift waiting for you</span></div></div>
+      <div class="cr-included-item"><span class="cr-included-icon">🏠</span><div class="cr-included-text"><strong data-en="7 Nights Beachfront" data-es="7 Noches Frente al Mar">7 Nights Beachfront</strong><span>Casa frente al mar · vistas al océano · habitaciones compartidas</span></div></div>
+      <div class="cr-included-item"><span class="cr-included-icon">🍽️</span><div class="cr-included-text"><strong data-en="All Meals" data-es="Todas las Comidas">All Meals</strong><span>7 desayunos · 6 almuerzos · 6 cenas + cena de bienvenida</span></div></div>
+      <div class="cr-included-item"><span class="cr-included-icon">🏄</span><div class="cr-included-text"><strong data-en="4 Surf Lessons" data-es="4 Clases de Surf">4 Surf Lessons</strong><span>Instructores locales · video análisis · todos los niveles</span></div></div>
+      <div class="cr-included-item"><span class="cr-included-icon">🧘</span><div class="cr-included-text"><strong data-en="Yoga Sessions" data-es="Clases de Yoga">Yoga Sessions</strong><span>En la playa o en el deck de yoga</span></div></div>
+      <div class="cr-included-item"><span class="cr-included-icon">🚤</span><div class="cr-included-text"><strong data-en="Isla Tortuga + Bioluminescence" data-es="Isla Tortuga + Bioluminiscencia">Isla Tortuga + Bioluminescence</strong><span>Excursión en lancha · snorkel · wakeboard · playas paradisiacas</span></div></div>
+      <div class="cr-included-item"><span class="cr-included-icon">🏞️</span><div class="cr-included-text"><strong data-en="ATV Waterfall Adventure" data-es="Aventura en ATV a las Cascadas">ATV Waterfall Adventure</strong><span>Montezuma · senderos en la jungla · playas escondidas</span></div></div>
+      <div class="cr-included-item"><span class="cr-included-icon">🏄‍♀️</span><div class="cr-included-text"><strong data-en="SUP Yoga" data-es="SUP Yoga">SUP Yoga</strong><span>Yoga en el agua — una experiencia única</span></div></div>
+      <div class="cr-included-item"><span class="cr-included-icon">🔔</span><div class="cr-included-text"><strong data-en="Sanación Sonora" data-es="Sanación Sonora">Sanación Sonora</strong><span>Ceremonia inmersiva con instrumentos terapéuticos</span></div></div>
+      <div class="cr-included-item"><span class="cr-included-icon">🌿</span><div class="cr-included-text"><strong data-en="Cacao Ceremony" data-es="Ceremonia de Cacao">Cacao Ceremony</strong><span>Experiencia de cacao ceremonial</span></div></div>
+      <div class="cr-included-item"><span class="cr-included-icon">🌙</span><div class="cr-included-text"><strong data-en="New Moon Ritual" data-es="Ritual de Luna Nueva">New Moon Ritual</strong><span>Una ceremonia especial para establecer intenciones</span></div></div>
+      <div class="cr-included-item"><span class="cr-included-icon">🚗</span><div class="cr-included-text"><strong data-en="All Transportation" data-es="Todo el Transporte">All Transportation</strong><span>Hacia y desde todas las actividades</span></div></div>
+      <div class="cr-included-item"><span class="cr-included-icon">🎁</span><div class="cr-included-text"><strong data-en="Welcome Gift" data-es="Regalo de Bienvenida">Welcome Gift</strong><span>Un regalo especial de SupAventura</span></div></div>
     </div>
-    <p class="cr-included-note" data-en="* Shared bathroom · Bunk beds · The house may have other guests outside the group." data-es="* Baño compartido · Literas · La casa puede tener otros huéspedes fuera del grupo.">* Shared bathroom · Bunk beds · The house may have other guests outside the group.</p>
+    <p class="cr-included-note">* Baño compartido · Literas · La casa puede tener otros huéspedes fuera del grupo.</p>
   </div>
 </section>
 
 <!-- HOUSE -->
 <section class="cr-house reveal">
   <div class="cr-house-gallery">
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%2010.24.08%20PM.jpeg" alt="Hammocks and common areas at beachfront house — women's surf retreat Santa Teresa" loading="lazy" />
     <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%204.50.42%20PM.jpeg" alt="Beachfront house kitchen — women's surf retreat Santa Teresa Costa Rica" loading="lazy" />
+    <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%202.18.40%20PM%20(1).jpeg" alt="Tropical garden path at beachfront house Santa Teresa Costa Rica" loading="lazy" />
     <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%204.50.42%20PM%20(1).jpeg" alt="Shared rooms at beachfront house — women's surf retreat Costa Rica" loading="lazy" />
   </div>
   <div class="cr-house-text">
-    <span class="cr-label" data-en="Your Home" data-es="Tu casa">Your Home</span>
-    <h2 class="cr-h2" data-en="Your Beachfront House" data-es="Tu casa frente al mar">Your Beachfront House</h2>
-    <p class="cr-p" data-en="For one week, a beautiful beachfront house will be your home in Santa Teresa — directly in front of the ocean and surrounded by jungle." data-es="Por una semana, una hermosa casa frente al mar será tu hogar en Santa Teresa — directamente frente al océano y rodeada de jungla.">For one week, a beautiful beachfront house will be your home in Santa Teresa — directly in front of the ocean and surrounded by jungle.</p>
-    <p class="cr-p" data-en="The whole group stays together. The perfect setting to connect, relax and share the experience." data-es="Todo el grupo se hospeda junto. El escenario perfecto para conectar, relajarse y compartir la experiencia.">The whole group stays together. The perfect setting to connect, relax and share the experience.</p>
+    <span class="cr-label">Tu casa</span>
+    <h2 class="cr-h2">Tu casa frente al mar</h2>
+    <p class="cr-p">Por una semana, una hermosa casa frente al mar será tu hogar en Santa Teresa — directamente frente al océano y rodeada de jungla.</p>
+    <p class="cr-p">Todo el grupo se hospeda junto. El escenario perfecto para conectar, relajarse y compartir la experiencia.</p>
     <div class="cr-room-list">
-      <div class="cr-room-item"><div class="cr-room-dot"></div><span data-en="Room for 2 — air conditioning" data-es="Habitación para 2 — aire acondicionado">Room for 2 — air conditioning</span></div>
-      <div class="cr-room-item"><div class="cr-room-dot"></div><span data-en="Room for 4 — air conditioning" data-es="Habitación para 4 — aire acondicionado">Room for 4 — air conditioning</span></div>
-      <div class="cr-room-item"><div class="cr-room-dot"></div><span data-en="Room for 2 — ocean view, fan + natural breeze" data-es="Habitación para 2 — vista al mar, ventilador + brisa natural">Room for 2 — ocean view, fan + natural breeze</span></div>
+      <div class="cr-room-item"><div class="cr-room-dot"></div><span>Habitación para 2 — aire acondicionado</span></div>
+      <div class="cr-room-item"><div class="cr-room-dot"></div><span>Habitación para 4 — aire acondicionado</span></div>
+      <div class="cr-room-item"><div class="cr-room-dot"></div><span>Habitación para 2 — vista al mar, ventilador + brisa natural</span></div>
     </div>
-    <p style="font-size:0.8rem; color:var(--cacao); margin-top:0.5rem; opacity:0.7;" data-en="Bunk beds · 1 shared bathroom · Full kitchen · Yoga deck" data-es="Literas · 1 baño compartido · Cocina completa · Deck de yoga">Bunk beds · 1 shared bathroom · Full kitchen · Yoga deck</p>
+    <p style="font-size:0.8rem; color:var(--cacao); margin-top:0.5rem; opacity:0.7;">Literas · 1 baño compartido · Cocina completa · Deck de yoga</p>
   </div>
 </section>
 
 <!-- PRICING -->
 <section class="cr-section cr-section--cream reveal" id="pricing">
   <div class="cr-container cr-center">
-    <span class="cr-label" data-en="Investment" data-es="Inversión">Investment</span>
-    <h2 class="cr-h2" data-en="Reserve Your Spot" data-es="Reservá tu lugar">Reserve Your Spot</h2>
-    <p class="cr-p" data-en="Only 8 places available." data-es="Solo 8 lugares disponibles.">Only 8 places available.</p>
+    <span class="cr-label">Inversión</span>
+    <h2 class="cr-h2">Reservá tu lugar</h2>
+    <p class="cr-p">Solo 8 lugares disponibles.</p>
     <div class="cr-pricing-cards">
       <div class="cr-price-card featured">
-        <span class="cr-price-badge" data-en="Early Bird — Save $200" data-es="Early Bird — Ahorrá $200">Early Bird — Save $200</span>
-        <span class="cr-price-tag" data-en="Early Bird Price" data-es="Precio Early Bird">Early Bird Price</span>
+        <span class="cr-price-badge">Early Bird — Ahorrá $200</span>
+        <span class="cr-price-tag">Precio Early Bird</span>
         <div class="cr-price-amount">$1,500</div>
-        <p class="cr-price-period" data-en="per person" data-es="por persona">per person</p>
-        <p class="cr-price-deadline" data-en="Available until September 15, 2026" data-es="Disponible hasta el 15 de septiembre 2026">Available until September 15, 2026</p>
+        <p class="cr-price-period">por persona</p>
+        <p class="cr-price-deadline">Disponible hasta el 15 de septiembre 2026</p>
         <ul class="cr-price-details">
-          <li data-en="7 nights beachfront accommodation" data-es="7 noches alojamiento frente al mar">7 nights beachfront accommodation</li>
-          <li data-en="All meals included" data-es="Todas las comidas incluidas">All meals included</li>
-          <li data-en="All activities & excursions" data-es="Todas las actividades y excursiones">All activities &amp; excursions</li>
-          <li data-en="Welcome gift" data-es="Regalo de bienvenida">Welcome gift</li>
-          <li data-en="$500 deposit to reserve" data-es="$500 de depósito para reservar">$500 deposit to reserve</li>
+          <li data-en="7 noches alojamiento frente al mar" data-es="7 noches alojamiento frente al mar">7 noches alojamiento frente al mar</li>
+          <li data-en="Todas las comidas incluidas" data-es="Todas las comidas incluidas">Todas las comidas incluidas</li>
+          <li data-en="All activities & excursions" data-es="Todas las actividades y excursiones">Todas las actividades y excursiones</li>
+          <li data-en="Regalo de bienvenida" data-es="Regalo de bienvenida">Regalo de bienvenida</li>
+          <li data-en="$500 de depósito para reservar" data-es="$500 de depósito para reservar">$500 de depósito para reservar</li>
         </ul>
-        <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20secure%20my%20place%20for%20Costa%20Rica%20Surf%20%26%20Adventure%202026." class="btn btn-primary" target="_blank" data-en="Secure My Place With $500 Deposit" data-es="Asegurá mi lugar con $500" id="priceBtn1">Secure My Place With $500 Deposit</a>
+        <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20secure%20my%20place%20for%20Costa%20Rica%20Surf%20%26%20Adventure%202026." class="btn btn-primary" target="_blank" id="priceBtn1">Asegurá mi lugar con $500</a>
       </div>
       <div class="cr-price-card">
-        <span class="cr-price-tag" data-en="Regular Price" data-es="Precio Regular">Regular Price</span>
+        <span class="cr-price-tag">Precio Regular</span>
         <div class="cr-price-amount">$1,700</div>
-        <p class="cr-price-period" data-en="per person" data-es="por persona">per person</p>
-        <p class="cr-price-deadline" data-en="After September 15, 2026" data-es="Después del 15 de septiembre 2026">After September 15, 2026</p>
+        <p class="cr-price-period">por persona</p>
+        <p class="cr-price-deadline">Después del 15 de septiembre 2026</p>
         <ul class="cr-price-details">
-          <li data-en="7 nights beachfront accommodation" data-es="7 noches alojamiento frente al mar">7 nights beachfront accommodation</li>
-          <li data-en="All meals included" data-es="Todas las comidas incluidas">All meals included</li>
-          <li data-en="All activities & excursions" data-es="Todas las actividades y excursiones">All activities &amp; excursions</li>
-          <li data-en="Welcome gift" data-es="Regalo de bienvenida">Welcome gift</li>
-          <li data-en="$500 deposit to reserve" data-es="$500 de depósito para reservar">$500 deposit to reserve</li>
+          <li data-en="7 noches alojamiento frente al mar" data-es="7 noches alojamiento frente al mar">7 noches alojamiento frente al mar</li>
+          <li data-en="Todas las comidas incluidas" data-es="Todas las comidas incluidas">Todas las comidas incluidas</li>
+          <li data-en="All activities & excursions" data-es="Todas las actividades y excursiones">Todas las actividades y excursiones</li>
+          <li data-en="Regalo de bienvenida" data-es="Regalo de bienvenida">Regalo de bienvenida</li>
+          <li data-en="$500 de depósito para reservar" data-es="$500 de depósito para reservar">$500 de depósito para reservar</li>
         </ul>
-        <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20Costa%20Rica%20Surf%20%26%20Adventure%202026." class="btn btn-outline" target="_blank" data-en="Ask on WhatsApp" data-es="Consultar por WhatsApp" id="priceBtn2">Ask on WhatsApp</a>
+        <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20Costa%20Rica%20Surf%20%26%20Adventure%202026." class="btn btn-outline" target="_blank" id="priceBtn2">Consultar por WhatsApp</a>
       </div>
     </div>
-    <p class="cr-pricing-note" data-en="Reserve your place with a $500 deposit. Balance due 30 days before arrival. Payment plans available — ask us." data-es="Reservá tu lugar con $500 de depósito. Saldo a pagar 30 días antes de la llegada. Planes de pago disponibles — consultanos.">Reserve your place with a $500 deposit. Balance due 30 days before arrival. Payment plans available — ask us.</p>
+    <p class="cr-pricing-note">Reservá tu lugar con $500 de depósito. Saldo a pagar 30 días antes de la llegada. Planes de pago disponibles — consultanos.</p>
   </div>
 </section>
 
@@ -494,13 +499,13 @@
 <!-- FAQ -->
 <section class="cr-section cr-section--sand reveal">
   <div class="cr-container" style="max-width:760px;">
-    <span class="cr-label" data-en="Questions" data-es="Preguntas">Questions</span>
-    <h2 class="cr-h2" data-en="FAQ" data-es="Preguntas frecuentes">FAQ</h2>
-    <div class="cr-faq-item"><div class="cr-faq-q"><span data-en="Do I need surf or yoga experience?" data-es="¿Necesito experiencia en surf o yoga?">Do I need surf or yoga experience?</span><span class="cr-faq-toggle">+</span></div><div class="cr-faq-a"><span data-en="None at all. Our instructors adapt to every level, from complete beginners. Just bring an open mind and willingness to try." data-es="Para nada. Nuestros instructores se adaptan a todos los niveles, desde principiantes completas. Solo traé una mente abierta.">None at all. Our instructors adapt to every level, from complete beginners. Just bring an open mind and willingness to try.</span></div></div>
-    <div class="cr-faq-item"><div class="cr-faq-q"><span data-en="Can I travel alone?" data-es="¿Puedo viajar sola?">Can I travel alone?</span><span class="cr-faq-toggle">+</span></div><div class="cr-faq-a"><span data-en="Absolutely — most women join solo! You'll arrive as a stranger and leave with new friends. Community is at the heart of this experience." data-es="¡Por supuesto! La mayoría viene sola. Llegás sin conocer a nadie y te vas con nuevas amigas.">Absolutely — most women join solo! You'll arrive as a stranger and leave with new friends. Community is at the heart of this experience.</span></div></div>
-    <div class="cr-faq-item"><div class="cr-faq-q"><span data-en="What's included?" data-es="¿Qué está incluido?">What's included?</span><span class="cr-faq-toggle">+</span></div><div class="cr-faq-a"><span data-en="Everything: 7 nights accommodation, all meals, 4 surf lessons with video analysis, Isla Tortuga boat trip, bioluminescence, ATV waterfall adventure, yoga, SUP yoga, sound healing, cacao ceremony, new moon ritual, welcome gift and all local transportation." data-es="Todo: 7 noches de alojamiento, todas las comidas, 4 clases de surf con video análisis, excursión a Isla Tortuga, bioluminiscencia, aventura en ATV a las cascadas, yoga, SUP yoga, sound healing, ceremonia de cacao, ritual de luna nueva, regalo de bienvenida y todo el transporte.">Everything: 7 nights accommodation, all meals, 4 surf lessons with video analysis, Isla Tortuga boat trip, bioluminescence, ATV waterfall adventure, yoga, SUP yoga, sound healing, cacao ceremony, new moon ritual, welcome gift and all local transportation.</span></div></div>
-    <div class="cr-faq-item"><div class="cr-faq-q"><span data-en="What airport should I fly into?" data-es="¿A qué aeropuerto vuelo?">What airport should I fly into?</span><span class="cr-faq-toggle">+</span></div><div class="cr-faq-a"><span data-en="Fly into San José (SJO). From there: small plane to Cobano + taxi, or shuttle + ferry that drops you right at the house. We'll send full arrival details once you reserve." data-es="Volás a San José (SJO). Desde ahí: avioneta a Cóbano + taxi, o shuttle + ferry que te deja en la puerta. Te enviamos los detalles de llegada al reservar.">Fly into San José (SJO). From there: small plane to Cobano + taxi, or shuttle + ferry that drops you right at the house. We'll send full arrival details once you reserve.</span></div></div>
-    <div class="cr-faq-item"><div class="cr-faq-q"><span data-en="How do I reserve?" data-es="¿Cómo reservo?">How do I reserve?</span><span class="cr-faq-toggle">+</span></div><div class="cr-faq-a"><span data-en="Message Juli on WhatsApp. A $500 deposit confirms your place. Payment plans available — just ask." data-es="Escribile a Juli por WhatsApp. Un depósito de $500 confirma tu lugar. Planes de pago disponibles.">Message Juli on WhatsApp. A $500 deposit confirms your place. Payment plans available — just ask.</span></div></div>
+    <span class="cr-label">Preguntas</span>
+    <h2 class="cr-h2">Preguntas frecuentes</h2>
+    <div class="cr-faq-item"><div class="cr-faq-q"><span>¿Necesito experiencia en surf o yoga?</span><span class="cr-faq-toggle">+</span></div><div class="cr-faq-a"><span>Para nada. Nuestros instructores se adaptan a todos los niveles, desde principiantes completas. Solo traé una mente abierta.</span></div></div>
+    <div class="cr-faq-item"><div class="cr-faq-q"><span>¿Puedo viajar sola?</span><span class="cr-faq-toggle">+</span></div><div class="cr-faq-a"><span>¡Por supuesto! La mayoría viene sola. Llegás sin conocer a nadie y te vas con nuevas amigas.</span></div></div>
+    <div class="cr-faq-item"><div class="cr-faq-q"><span>¿Qué está incluido?</span><span class="cr-faq-toggle">+</span></div><div class="cr-faq-a"><span>Todo: 7 noches de alojamiento, todas las comidas, 4 clases de surf con video análisis, excursión a Isla Tortuga, bioluminiscencia, aventura en ATV a las cascadas, yoga, SUP yoga, sound healing, ceremonia de cacao, ritual de luna nueva, regalo de bienvenida y todo el transporte.</span></div></div>
+    <div class="cr-faq-item"><div class="cr-faq-q"><span>¿A qué aeropuerto vuelo?</span><span class="cr-faq-toggle">+</span></div><div class="cr-faq-a"><span>Volás a San José (SJO). Desde ahí: avioneta a Cóbano + taxi, o shuttle + ferry que te deja en la puerta. Te enviamos los detalles de llegada al reservar.</span></div></div>
+    <div class="cr-faq-item"><div class="cr-faq-q"><span>¿Cómo reservo?</span><span class="cr-faq-toggle">+</span></div><div class="cr-faq-a"><span>Escribile a Juli por WhatsApp. Un depósito de $500 confirma tu lugar. Planes de pago disponibles.</span></div></div>
   </div>
 </section>
 
@@ -510,14 +515,14 @@
   <div class="cr-final-overlay"></div>
   <div class="cr-final-content">
     <div class="cr-final-brand">
-      <span data-en="Not just a trip." data-es="No es solo un viaje.">Not just a trip.</span><br>
+      <span>No es solo un viaje.</span><br>
       <em data-en="Not just a vacation." data-es="No son solo vacaciones.">Not just a vacation.</em><br>
-      <span data-en="A week you will remember forever." data-es="Es una semana que vas a recordar para siempre.">A week you will remember forever.</span>
+      <span>Es una semana que vas a recordar para siempre.</span>
     </div>
-    <p class="cr-final-sub" data-en="Santa Teresa · December 5–12, 2026 · Only 8 spots" data-es="Santa Teresa · 5–12 de diciembre 2026 · Solo 8 lugares">Santa Teresa · December 5–12, 2026 · Only 8 spots</p>
+    <p class="cr-final-sub">Santa Teresa · 5–12 de diciembre 2026 · Solo 8 lugares</p>
     <div class="cr-final-btns">
-      <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20start%20my%20Costa%20Rica%20adventure%20in%20December%202026." class="btn btn-primary" target="_blank" id="finalBtn1">Start Your Costa Rica Adventure</a>
-      <a href="#pricing" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5); color:#fff;" id="finalBtn2">See Pricing</a>
+      <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20start%20my%20Costa%20Rica%20adventure%20in%20December%202026." class="btn btn-primary" target="_blank" id="finalBtn1">Empezá tu aventura en Costa Rica</a>
+      <a href="#pricing" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5); color:#fff;" id="finalBtn2">Ver precios</a>
     </div>
   </div>
 </section>
@@ -529,12 +534,12 @@
   <div class="container footer-inner">
     <a href="index.html" class="logo-link"><img src="assets/img/juli2..png" alt="SUP Aventura" height="72"></a>
     <nav class="footer-nav">
-      <a href="yoga.html" data-en="Yoga" data-es="Yoga">Yoga</a>
-      <a href="cacao.html" data-en="Cacao" data-es="Cacao">Cacao</a>
-      <a href="sound-healing.html" data-en="Sound Healing" data-es="Sanación Sonora">Sound Healing</a>
-      <a href="experiences.html" data-en="Experiences" data-es="Experiencias">Experiences</a>
-      <a href="costa-rica-2026.html" data-en="Costa Rica 2026" data-es="Costa Rica 2026">Costa Rica 2026</a>
-      <a href="index.html#contact" data-en="Contact" data-es="Contacto">Contact</a>
+      <a href="yoga.html">Yoga</a>
+      <a href="cacao.html">Cacao</a>
+      <a href="sound-healing.html">Sanación Sonora</a>
+      <a href="experiences.html">Experiencias</a>
+      <a href="costa-rica-2026.html">Costa Rica 2026</a>
+      <a href="index.html#contact">Contactoo</a>
     </nav>
     <p class="footer-copy">&copy; 2026 SUP Aventura · Santa Teresa, Costa Rica</p>
   </div>
@@ -542,13 +547,13 @@
 
 <!-- FLOATING NAV -->
 <nav class="bottom-nav" id="bottomNav">
-  <a href="experiences.html" class="bottom-nav-item"><span class="nav-icon">🌊</span><span data-en="Experiences" data-es="Experiencias">Experiences</span></a>
-  <a href="#experience" class="bottom-nav-item"><span class="nav-icon">🏄</span><span data-en="The Trip" data-es="El viaje">The Trip</span></a>
+  <a href="experiences.html" class="bottom-nav-item"><span class="nav-icon">🌊</span><span>Experiencias</span></a>
+  <a href="#experience" class="bottom-nav-item"><span class="nav-icon">🏄</span><span>El viaje</span></a>
   <a href="https://wa.me/50683941825?text=Hi!%20I%27d%20like%20to%20reserve%20my%20spot%20for%20Costa%20Rica%202026." class="bottom-nav-wa" target="_blank" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
-  <a href="#pricing" class="bottom-nav-item"><span class="nav-icon">💰</span><span data-en="Pricing" data-es="Precio">Pricing</span></a>
-  <a href="index.html" class="bottom-nav-item"><span class="nav-icon">🏠</span><span data-en="Home" data-es="Inicio">Home</span></a>
+  <a href="#pricing" class="bottom-nav-item"><span class="nav-icon">💰</span><span>Precio</span></a>
+  <a href="index.html" class="bottom-nav-item"><span class="nav-icon">🏠</span><span>Inicio</span></a>
 </nav>
 
 <script>
@@ -602,7 +607,7 @@
     var finalBtn1 = document.getElementById('finalBtn1');
     var finalBtn2 = document.getElementById('finalBtn2');
     if (finalBtn1) finalBtn1.textContent = lang === 'en' ? 'Start Your Costa Rica Adventure' : 'Empezá tu aventura en Costa Rica';
-    if (finalBtn2) finalBtn2.textContent = lang === 'en' ? 'See Pricing' : 'Ver precios';
+    if (finalBtn2) finalBtn2.textContent = lang === 'en' ? 'See Precio' : 'Ver precios';
     // All other buttons
     var btns = {
       'heroBtn1': ['Reserve Your Spot', 'Reservá tu lugar'],
