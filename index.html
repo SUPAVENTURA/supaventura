@@ -62,6 +62,33 @@
   .cr-banner-inner { grid-template-columns: 1fr; }
   .cr-banner-img { height: 220px; }
 }
+
+/* ===== COMMUNITY (SUP Aventura) ===== */
+.community-section { background: var(--sand); padding: clamp(4rem, 8vw, 7rem) 0; }
+.community-section h2 { font-family: var(--font-serif); font-weight: 300; font-size: clamp(2rem, 4vw, 3rem); color: var(--earth); margin: 0.5rem 0 1rem; }
+.community-intro { max-width: 640px; color: var(--cacao); font-size: 1.05rem; line-height: 1.75; }
+.community-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0; }
+.community-pillar { background: var(--cream); overflow: hidden; }
+.community-pillar img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.community-pillar-body { padding: 1.5rem 1.6rem 1.8rem; }
+.community-pillar .mono { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); }
+.community-pillar h3 { font-family: var(--font-serif); font-weight: 400; font-size: 1.5rem; color: var(--earth); margin: 0.4rem 0 0.6rem; }
+.community-pillar p { font-size: 0.92rem; line-height: 1.7; color: var(--cacao); opacity: 1; }
+.community-mantras { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 1.4rem; padding: 2rem 0; border-top: 1px solid rgba(61,43,31,0.15); border-bottom: 1px solid rgba(61,43,31,0.15); margin-bottom: 3rem; }
+.community-mantras span { font-family: var(--font-serif); font-style: italic; font-size: 1.25rem; color: var(--earth); }
+.community-mosaic { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 180px; gap: 0.6rem; }
+.community-mosaic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.community-mosaic img.tall { grid-row: span 2; }
+.community-mosaic img.wide { grid-column: span 2; }
+.community-mosaic img.full { grid-column: 1 / -1; }
+.community-section .community-cta a.btn-outline { color: var(--earth) !important; border-color: var(--earth) !important; }
+.community-cta { text-align: center; margin-top: 3rem; }
+.community-cta p { color: var(--cacao); margin-bottom: 1.2rem; font-size: 1.05rem; opacity: 1; }
+.community-cta .btns { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+@media (max-width: 820px) {
+  .community-pillars { grid-template-columns: 1fr; }
+  .community-mosaic { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
+}
 </style>
 </head>
 <body>
@@ -227,6 +254,66 @@
 <h3 data-en="You arrive. You let go." data-es="Llegás. Respirás. Te entregás.">You arrive. You let go.</h3>
 <p data-en="Show up with an open heart. Everything else is taken care of. The land does the rest." data-es="Sin agenda, sin expectativas — solo vos y lo que necesitás en este momento.">Show up with an open heart. Everything else is taken care of. The land does the rest.</p>
 </div>
+</div>
+</div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="community-section sa-reveal" id="comunidad">
+<div class="container">
+<span class="mono section-label" data-en="SUP Aventura" data-es="SUP Aventura">SUP Aventura</span>
+<h2 data-en="More than classes. A community." data-es="Más que clases. Una comunidad.">More than classes. A community.</h2>
+<p class="community-intro" data-en="SUP Aventura was born on a paddle board: experiences for people who love the summer. We want you to connect with nature, find moments of happiness in the water and carry them into your life. Today it lives in Santa Teresa, in the Buenos Aires Delta and on every trip we take together." data-es="SUP Aventura nació arriba de una tabla: experiencias para gente que ama el verano. Queremos que conectes con la naturaleza, encuentres momentos de felicidad en el agua y los lleves a tu vida. Hoy vive en Santa Teresa, en el Delta de Buenos Aires y en cada viaje que hacemos juntas.">SUP Aventura was born on a paddle board: experiences for people who love the summer. We want you to connect with nature, find moments of happiness in the water and carry them into your life. Today it lives in Santa Teresa, in the Buenos Aires Delta and on every trip we take together.</p>
+<div class="community-pillars">
+  <div class="community-pillar">
+    <img src="assets/img/community/delta-yoga.jpg" alt="Yoga en el Delta de Buenos Aires" loading="lazy" />
+    <div class="community-pillar-body">
+      <span class="mono" data-en="Buenos Aires" data-es="Buenos Aires">Buenos Aires</span>
+      <h3 data-en="Delta Days" data-es="Delta Days">Delta Days</h3>
+      <p data-en="SUP crossings through the Delta for beginners and advanced paddlers, SUP yoga, sunrises and full moons." data-es="Travesías en SUP por el Delta para principiantes y avanzadas, SUP yoga, amaneceres y lunas llenas.">SUP crossings through the Delta for beginners and advanced paddlers, SUP yoga, sunrises and full moons.</p>
+    </div>
+  </div>
+  <div class="community-pillar">
+    <img src="assets/img/community/aruba-beach-yoga.jpg" alt="Viaje de SUP Aventura en Aruba" loading="lazy" />
+    <div class="community-pillar-body">
+      <span class="mono" data-en="Trips" data-es="Viajes">Trips</span>
+      <h3 data-en="SUP trips &amp; retreats" data-es="Viajes y retiros">SUP trips &amp; retreats</h3>
+      <p data-en="We choose destinations with water to discover places together: Aruba, Punta del Este, sleepovers, surf trips and retreats." data-es="Elegimos destinos con agua para conocer lugares juntas: Aruba, Punta del Este, pijamadas, surf trips y retiros.">We choose destinations with water to discover places together: Aruba, Punta del Este, sleepovers, surf trips and retreats.</p>
+    </div>
+  </div>
+  <div class="community-pillar">
+    <img src="assets/img/community/santa-teresa-deck.jpg" alt="Clase de yoga en el deck de Santa Teresa" loading="lazy" />
+    <div class="community-pillar-body">
+      <span class="mono" data-en="Santa Teresa · Costa Rica" data-es="Santa Teresa · Costa Rica">Santa Teresa · Costa Rica</span>
+      <h3 data-en="The season by the ocean" data-es="La temporada frente al mar">The season by the ocean</h3>
+      <p data-en="Yoga, cacao, sound healing, women circles and moon gatherings to connect body, mind and spirit." data-es="Yoga, cacao, sound healing, círculos de mujeres y encuentros de luna para conectar cuerpo, mente y espíritu.">Yoga, cacao, sound healing, women circles and moon gatherings to connect body, mind and spirit.</p>
+    </div>
+  </div>
+</div>
+<div class="community-mantras">
+  <span>El agua transforma</span>
+  <span>People of the sun</span>
+  <span>Bailamos con las olas</span>
+  <span>Sonrisas saladas</span>
+  <span>Días en patas</span>
+  <span>Stay wet</span>
+  <span>Home is where the beach is</span>
+</div>
+<div class="community-mosaic">
+  <img src="assets/img/community/delta-girls.jpg" alt="Grupo de SUP Aventura en el Delta" loading="lazy" class="wide" />
+  <img src="assets/img/community/aruba-night-supyoga.jpg" alt="SUP yoga nocturno en Aruba" loading="lazy" />
+  <img src="assets/img/community/women-circle.jpg" alt="Círculo de mujeres" loading="lazy" class="tall" />
+  <img src="assets/img/community/punta-sup.jpg" alt="Clase de SUP en Punta del Este" loading="lazy" />
+  <img src="assets/img/community/punta-del-este-aerial.jpg" alt="Tablas de SUP desde arriba" loading="lazy" />
+  <img src="assets/img/community/viaje-grupo.jpg" alt="Grupo de viaje SUP Aventura" loading="lazy" />
+  <img src="assets/img/community/santa-teresa-grupo.jpg" alt="Grupo SUP Aventura en la playa" loading="lazy" class="full" />
+</div>
+<div class="community-cta">
+  <p data-en="Next stop: Costa Rica, December 5–12. Only 4 spots left." data-es="Próxima parada: Costa Rica, 5 al 12 de diciembre. Quedan 4 lugares.">Next stop: Costa Rica, December 5–12. Only 4 spots left.</p>
+  <div class="btns">
+    <a class="btn btn-primary" href="costa-rica-2026.html" data-en="Join Costa Rica 2026 →" data-es="Sumate a Costa Rica 2026 →">Join Costa Rica 2026 →</a>
+    <a class="btn btn-outline" href="https://www.instagram.com/supaventura/" target="_blank" rel="noopener noreferrer" data-en="Follow @supaventura" data-es="Seguinos en @supaventura">Follow @supaventura</a>
+  </div>
 </div>
 </div>
 </section>
