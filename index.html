@@ -63,6 +63,33 @@
   .cr-banner-img { height: 220px; }
 }
 
+/* ===== PUNTA DEL ESTE 2027 ===== */
+.pde-section { background: var(--ocean); padding: clamp(4rem, 8vw, 6rem) 1.5rem; color: var(--cream); }
+.pde-inner { max-width: 1100px; margin: 0 auto; }
+.pde-top { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.pde-section .section-label { color: var(--cream); opacity: 0.85; }
+.pde-section h2 { font-family: var(--font-serif); font-weight: 300; font-size: clamp(1.8rem, 3vw, 2.8rem); color: var(--cream); margin: 0.5rem 0 1rem; }
+.pde-section p { color: rgba(250,246,240,0.88); font-size: 1rem; line-height: 1.7; opacity: 1; margin-bottom: 0; }
+.pde-price { margin-top: 1.2rem; font-family: var(--font-serif); font-size: 1.35rem; color: var(--cream); }
+.pde-price small { display: block; font-family: var(--font-sans); font-size: 0.85rem; opacity: 0.8; margin-top: 0.2rem; }
+.pde-img { height: 340px; overflow: hidden; border-radius: 2px; }
+.pde-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pde-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(250,246,240,0.25); margin: 3rem 0 2.5rem; border: 1px solid rgba(250,246,240,0.25); }
+.pde-item { background: var(--ocean); padding: 1.4rem 1.5rem; }
+.pde-item h3 { font-family: var(--font-serif); font-weight: 400; font-size: 1.3rem; color: var(--cream); margin: 0 0 0.35rem; }
+.pde-item p { font-size: 0.9rem; line-height: 1.6; }
+.pde-local { display: grid; grid-template-columns: 220px 1fr; gap: 2rem; align-items: center; background: rgba(30,20,16,0.18); padding: 1.6rem; }
+.pde-local img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.pde-local h3 { font-family: var(--font-serif); font-weight: 400; font-size: 1.6rem; color: var(--cream); margin: 0 0 0.4rem; }
+.pde-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.pde-section .btn-outline { color: var(--cream) !important; border-color: var(--cream) !important; }
+.pde-note { font-size: 0.8rem !important; opacity: 0.75 !important; margin-top: 1.5rem !important; text-align: center; }
+@media (max-width: 820px) {
+  .pde-top, .pde-local { grid-template-columns: 1fr; gap: 1.5rem; }
+  .pde-img { height: 230px; }
+  .pde-grid { grid-template-columns: 1fr; }
+}
+
 /* ===== COMMUNITY (SUP Aventura) ===== */
 .community-section { background: var(--sand); padding: clamp(4rem, 8vw, 7rem) 0; }
 .community-section h2 { font-family: var(--font-serif); font-weight: 300; font-size: clamp(2rem, 4vw, 3rem); color: var(--earth); margin: 0.5rem 0 1rem; }
@@ -103,6 +130,7 @@
 <a href="cacao.html" data-en="Cacao" data-es="Cacao">Cacao</a>
 <a href="sound-healing.html" data-en="Sound Healing" data-es="Sanación Sonora">Sound Healing</a>
 <a href="costa-rica-2026.html" data-en="Costa Rica 2026" data-es="Costa Rica 2026" style="color: var(--orange); font-weight:500;">Costa Rica 2026</a>
+<a href="#punta" data-en="Punta del Este 2027" data-es="Punta del Este 2027" style="color: var(--ocean); font-weight:500;">Punta del Este 2027</a>
 </nav>
 <div class="header-actions">
 <a href="https://wa.me/50683941825?text=Hi%20Juli!%20I'd%20like%20to%20know%20more%20about%20your%20experiences." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" data-en="WhatsApp" data-es="WhatsApp">WhatsApp</a>
@@ -143,6 +171,68 @@
     <div class="cr-banner-img">
       <img src="assets/img/WhatsApp%20Image%202026-07-16%20at%202.54.11%20PM.jpeg" alt="Costa Rica Surf & Adventure December 2026" />
     </div>
+  </div>
+</section>
+
+<!-- PUNTA DEL ESTE 2027 -->
+<section class="pde-section sa-reveal" id="punta">
+  <div class="pde-inner">
+    <div class="pde-top">
+      <div>
+        <span class="mono section-label" data-en="Punta del Este, Uruguay · January 8–11" data-es="Punta del Este, Uruguay · 8 al 11 de enero">Punta del Este, Uruguay · January 8–11</span>
+        <h2 data-en="Our third summer paddling to Isla Gorriti" data-es="Tercer verano remando a Isla Gorriti">Our third summer paddling to Isla Gorriti</h2>
+        <p data-en="Four days of SUP, pilates on the boards, yoga and sunset paddles, with a guided crossing to Isla Gorriti on Sunday, January 10. Come alone or with friends — no experience needed, we teach you everything." data-es="Cuatro días de SUP, pilates sobre las tablas, yoga y remadas al atardecer, con la travesía guiada a Isla Gorriti el domingo 10 de enero. Vení sola o con amigas: no hace falta experiencia, te enseñamos todo.">Four days of SUP, pilates on the boards, yoga and sunset paddles, with a guided crossing to Isla Gorriti on Sunday, January 10. Come alone or with friends — no experience needed, we teach you everything.</p>
+        <div class="pde-price">
+          <span data-en="US$700 · First 4 spots US$650" data-es="US$700 · Primeros 4 lugares US$650">US$700 · First 4 spots US$650</span>
+          <small data-en="Book your spot with 50% of the total." data-es="Reservás tu lugar con el 50% del total.">Book your spot with 50% of the total.</small>
+        </div>
+        <div class="pde-btns">
+          <a href="https://wa.me/50683941825?text=Hola%20Juli!%20PUNTA%20%F0%9F%8C%85%20Quiero%20info%20del%20viaje%20a%20Punta%20del%20Este%20(8%20al%2011%20de%20enero)." class="btn btn-primary" target="_blank" rel="noopener noreferrer" id="pdeBtn1">Book on WhatsApp →</a>
+        </div>
+      </div>
+      <div class="pde-img">
+        <img src="assets/img/community/punta-sup.jpg" alt="Grupo de SUP Aventura en Punta del Este" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="pde-grid">
+      <div class="pde-item">
+        <h3 data-en="3 nights by the sea" data-es="3 noches frente al mar">3 nights by the sea</h3>
+        <p data-en="Hotel with a pool, one block from the beach. Rooms for 2 and 3, all with single beds." data-es="Hotel con pileta a una cuadra del mar. Habitaciones para 2 y 3, todas con camas individuales.">Hotel with a pool, one block from the beach. Rooms for 2 and 3, all with single beds.</p>
+      </div>
+      <div class="pde-item">
+        <h3 data-en="Brunch every day" data-es="Brunch todos los días">Brunch every day</h3>
+        <p data-en="A generous buffet to start every morning together." data-es="Un buffet abundante para arrancar cada mañana juntas.">A generous buffet to start every morning together.</p>
+      </div>
+      <div class="pde-item">
+        <h3 data-en="Sunset paddles" data-es="Remadas al atardecer">Sunset paddles</h3>
+        <p data-en="The best moment of the day, out on the water." data-es="El mejor momento del día, arriba del agua.">The best moment of the day, out on the water.</p>
+      </div>
+      <div class="pde-item">
+        <h3 data-en="SUP clinics" data-es="Clínicas de SUP">SUP clinics</h3>
+        <p data-en="Technique classes, turning clinic and a chill crossing to get ready for the island." data-es="Clases técnicas, clínica de giros y travesía chill para llegar preparadas a la isla.">Technique classes, turning clinic and a chill crossing to get ready for the island.</p>
+      </div>
+      <div class="pde-item">
+        <h3 data-en="Pilates, yoga &amp; meditation" data-es="Pilates, yoga y meditación">Pilates, yoga &amp; meditation</h3>
+        <p data-en="Pilates on the boards, meditation on the water and stretching to close each day." data-es="Pilates sobre las tablas, meditación en el agua y stretching para cerrar cada día.">Pilates on the boards, meditation on the water and stretching to close each day.</p>
+      </div>
+      <div class="pde-item">
+        <h3 data-en="Photographer &amp; surprises" data-es="Fotógrafo y sorpresas">Photographer &amp; surprises</h3>
+        <p data-en="A professional photographer, games on the boards and gifts. You just enjoy." data-es="Fotógrafo profesional, juegos sobre las tablas y regalos. Vos solo disfrutás.">A professional photographer, games on the boards and gifts. You just enjoy.</p>
+      </div>
+    </div>
+
+    <div class="pde-local">
+      <img src="assets/img/community/punta-del-este-aerial.jpg" alt="Tablas de SUP en el mar de Punta del Este" loading="lazy" />
+      <div>
+        <h3 data-en="Already in Punta?" data-es="¿Ya estás en Punta?">Already in Punta?</h3>
+        <p data-en="If you live there or already have a place to stay, join all the activities without the hotel — the Isla Gorriti crossing included. No board? We bring the full kit: board, paddle, leash and life vest." data-es="Si vivís ahí o ya tenés dónde quedarte, sumate a todas las actividades sin alojamiento, con la travesía a Isla Gorriti incluida. ¿No tenés tabla? Te llevamos el equipo completo: tabla, remo, leash y chaleco.">If you live there or already have a place to stay, join all the activities without the hotel — the Isla Gorriti crossing included. No board? We bring the full kit: board, paddle, leash and life vest.</p>
+        <div class="pde-btns">
+          <a href="https://wa.me/50683941825?text=Hola%20Juli!%20PUNTA%20%F0%9F%8C%85%20Ya%20estoy%20en%20Punta%20y%20quiero%20sumarme%20a%20las%20actividades." class="btn btn-outline" target="_blank" rel="noopener noreferrer" id="pdeBtn2">Ask for the options</a>
+        </div>
+      </div>
+    </div>
+    <p class="pde-note" data-en="Activities may change depending on the weather." data-es="Las actividades pueden cambiar según el clima.">Activities may change depending on the weather.</p>
   </div>
 </section>
 
@@ -309,9 +399,10 @@
   <img src="assets/img/community/santa-teresa-grupo.jpg" alt="Grupo SUP Aventura en la playa" loading="lazy" class="full" />
 </div>
 <div class="community-cta">
-  <p data-en="Next stop: Costa Rica, December 5–12. Only 4 spots left." data-es="Próxima parada: Costa Rica, 5 al 12 de diciembre. Quedan 4 lugares.">Next stop: Costa Rica, December 5–12. Only 4 spots left.</p>
+  <p data-en="Next stops: Costa Rica, December 5–12, and Punta del Este, January 8–11." data-es="Próximas paradas: Costa Rica, del 5 al 12 de diciembre, y Punta del Este, del 8 al 11 de enero.">Next stops: Costa Rica, December 5–12, and Punta del Este, January 8–11.</p>
   <div class="btns">
     <a class="btn btn-primary" href="costa-rica-2026.html" data-en="Join Costa Rica 2026 →" data-es="Sumate a Costa Rica 2026 →">Join Costa Rica 2026 →</a>
+    <a class="btn btn-primary" href="#punta" id="pdeBtn3">Punta del Este 2027 →</a>
     <a class="btn btn-outline" href="https://www.instagram.com/supaventura/" target="_blank" rel="noopener noreferrer" data-en="Follow @supaventura" data-es="Seguinos en @supaventura">Follow @supaventura</a>
   </div>
 </div>
@@ -405,9 +496,10 @@
 <a href="sound-healing.html" data-en="Sound Healing" data-es="Sanación Sonora">Sound Healing</a>
 <a href="experiences.html" data-en="Experiences" data-es="Experiencias">Experiences</a>
 <a href="costa-rica-2026.html" data-en="Costa Rica 2026" data-es="Costa Rica 2026">Costa Rica 2026</a>
+<a href="#punta" data-en="Punta del Este 2027" data-es="Punta del Este 2027">Punta del Este 2027</a>
 <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
 </nav>
-<p class="footer-copy">&copy; 2026 SUP Aventura · Santa Teresa, Costa Rica</p>
+<p class="footer-copy">&copy; 2026 SUP Aventura · Santa Teresa, Costa Rica · Punta del Este, Uruguay</p>
 </div>
 </footer>
 
@@ -494,6 +586,10 @@
     var btn2 = document.getElementById('bannerBtn2');
     if (btn1) btn1.textContent = lang === 'en' ? 'Discover Costa Rica 2026 →' : 'Conocé el viaje →';
     if (btn2) btn2.textContent = lang === 'en' ? 'Ask on WhatsApp' : 'Consultar por WhatsApp';
+    var p1 = document.getElementById('pdeBtn1');
+    var p2 = document.getElementById('pdeBtn2');
+    if (p1) p1.textContent = lang === 'en' ? 'Book on WhatsApp →' : 'Reservar por WhatsApp →';
+    if (p2) p2.textContent = lang === 'en' ? 'Ask for the options' : 'Consultar opciones';
   }
 })();
 </script>
