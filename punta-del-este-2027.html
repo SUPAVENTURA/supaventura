@@ -194,7 +194,9 @@
 </style>
 <style>
 /* PUNTA: extras sobre la base de Costa Rica */
-.cr-house-gallery img { height: 100%; min-height: 260px; }
+.cr-house { background: var(--sand); align-items: center; }
+.cr-house-gallery { gap: 6px; padding: 6px; grid-template-rows: auto auto; }
+.cr-house-gallery img { height: auto; min-height: 0; aspect-ratio: 1; }
 .pde-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-top: 2.5rem; }
 .pde-gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
 .pde-local { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; max-width: 1000px; margin: 0 auto; }
@@ -368,7 +370,7 @@
 </section>
 
 <!-- YA ESTAS EN PUNTA -->
-<section class="cr-section cr-section--sand reveal" id="ya-en-punta">
+<section class="cr-section cr-section--cream reveal" id="ya-en-punta">
   <div class="pde-local">
     <img src="assets/img/punta/ya-en-punta.jpg" alt="Remando en la costa de Punta del Este" loading="lazy" />
     <div>
@@ -386,7 +388,7 @@
 </section>
 
 <!-- GALERIA -->
-<section class="cr-section cr-section--cream reveal">
+<section class="cr-section cr-section--sand reveal">
   <div class="cr-container">
     <div class="cr-center">
       <span class="cr-label">Veranos anteriores</span>
