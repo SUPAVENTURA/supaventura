@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Portugal · Surf y apnea</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Una semana de surf y apnea en Baleal, Peniche, Portugal. 18 al 25 de septiembre de 2027. SUP Aventura." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+<style>
+/* Layout: página de viaje de una columna; banda de mar arriba con la promesa, después la semana día por día y las dudas. */
+:root {
+  --bg: #faf6f0;
+  --card: #f0e6d3;
+  --fg: #3d2b1f;
+  --muted: #6b5546;
+  --accent: #e8804a;
+  --accent-fg: #1e1410;
+  --sea: #2f5d73;
+  --sea-fg: #faf6f0;
+  --sea-muted: #c9dde6;
+  --line: #e2d5c1;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --mono: 'Space Mono', ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1e1612; --card: #2b201a; --fg: #f0e6d3; --muted: #c4b19d; --accent: #f2a978; --accent-fg: #1e1410;
+    --sea: #1f4252; --sea-fg: #f0e6d3; --sea-muted: #a9c6d3; --line: #3d2f26; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1e1612; --card: #2b201a; --fg: #f0e6d3; --muted: #c4b19d; --accent: #f2a978; --accent-fg: #1e1410;
+  --sea: #1f4252; --sea-fg: #f0e6d3; --sea-muted: #a9c6d3; --line: #3d2f26; color-scheme: dark;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.band { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.inner { max-width: 720px; margin: 0 auto; }
+
+.draft { background: var(--accent); color: var(--accent-fg); text-align: center; font-size: 0.8rem; font-weight: 500; padding-block: 6px; }
+
+.hero { background: var(--sea); color: var(--sea-fg); padding-block: 56px 48px; }
+.hero .inner { display: flex; flex-direction: column; gap: 14px; }
+.kicker { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sea-muted); }
+.hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.6rem, 9vw, 4.6rem); line-height: 1; text-wrap: balance; }
+.hero h1 em { font-style: italic; }
+.hero p { max-width: 34em; color: var(--sea-muted); font-size: 1.05rem; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.06em; margin-top: 6px; }
+.cta { display: inline-block; align-self: flex-start; margin-top: 10px; background: var(--accent); color: var(--accent-fg); text-decoration: none; font-weight: 500; padding: 14px 22px; border-radius: 99px; }
+.cta:hover { opacity: .92; }
+
+section.band { padding-block: 48px 8px; }
+h2 { font-family: var(--serif); font-weight: 600; font-size: 2rem; line-height: 1.15; margin-bottom: 14px; text-wrap: balance; }
+.lead { max-width: 36em; color: var(--muted); margin-bottom: 18px; }
+
+.why { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.why div { background: var(--card); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.why strong { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; }
+.why span { font-size: 0.92rem; color: var(--muted); }
+
+.days { list-style: none; border-top: 1px solid var(--line); }
+.days li { display: grid; grid-template-columns: 84px 1fr; gap: 12px; padding-block: 12px; border-bottom: 1px solid var(--line); }
+.days .d { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; color: var(--muted); padding-top: 3px; }
+.days .t { min-width: 0; }
+.days .note { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+
+.inc { columns: 2 260px; column-gap: 28px; list-style: none; }
+.inc li { break-inside: avoid; padding: 6px 0 6px 18px; position: relative; }
+.inc li::before { content: ""; position: absolute; left: 0; top: 15px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+.not { font-size: 0.9rem; color: var(--muted); margin-top: 12px; }
+
+.price { background: var(--card); border-radius: 14px; padding: 20px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: baseline; }
+.price .amt { font-family: var(--serif); font-size: 2.4rem; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+.price .lbl { font-size: 0.85rem; color: var(--muted); }
+.price p { flex-basis: 100%; font-size: 0.9rem; color: var(--muted); }
+
+details { border-bottom: 1px solid var(--line); padding-block: 12px; }
+details:first-of-type { border-top: 1px solid var(--line); }
+summary { cursor: pointer; font-weight: 500; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--muted); }
+details[open] summary::after { content: "–"; }
+details p { margin-top: 8px; color: var(--muted); max-width: 38em; }
+
+.end { padding-block: 48px 64px; }
+.end .inner { background: var(--sea); color: var(--sea-fg); border-radius: 16px; padding: 28px 22px; display: flex; flex-direction: column; gap: 10px; }
+.end h2 { margin: 0; }
+.end p { color: var(--sea-muted); }
+footer { text-align: center; font-size: 0.85rem; color: var(--muted); padding-block: 0 40px; }
+</style>
+</head>
+<body>
+
+<div class="draft band">Borrador · todavía no está publicado</div>
+
+<header class="hero band">
+  <div class="inner">
+    <span class="kicker">SUP Aventura · Baleal · Peniche, Portugal</span>
+    <h1>Aprendé surf <em>sin miedo al mar</em></h1>
+    <p>Una semana de surf, respiración y apnea en una de las mejores playas de Europa para empezar. Con un surfista de olas grandes de Nazaré que te enseña a mantener la calma en el agua.</p>
+    <div class="facts"><span>18–25 SEP 2027</span><span>7 NOCHES</span><span>TODO INCLUIDO CON CHEF</span><span>SIN EXPERIENCIA</span></div>
+    <a class="cta" href="https://wa.me/50683941825?text=Hola%20Juli!%20PORTUGAL%20%F0%9F%8C%8A%20Quiero%20enterarme%20primero%20del%20viaje%20de%20surf%20y%20apnea%20(18%20al%2025%20de%20septiembre%202027)." target="_blank" rel="noopener">Enterate primero · Escribime PORTUGAL</a>
+  </div>
+</header>
+
+<section class="band" aria-labelledby="por-que">
+  <div class="inner">
+    <h2 id="por-que">Lo que tiene esta semana</h2>
+    <div class="why">
+      <div><strong>Calma en el agua</strong><span>Respiración y apnea con Fede, en tierra y en el mar. Aprendés a aguantar un revolcón tranquila.</span></div>
+      <div><strong>Te ves surfear</strong><span>Salty Surf Eyes te filma desde el agua y después vemos juntas el video para mejorar.</span></div>
+      <div><strong>Comer bien todos los días</strong><span>Chef y todas las comidas incluidas, con opciones para dietas especiales.</span></div>
+      <div><strong>El sello SUP Aventura</strong><span>SUP yoga en la laguna, ceremonia de cacao, sound healing y una comunidad que se arma desde el primer día.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="semana">
+  <div class="inner">
+    <h2 id="semana">La semana</h2>
+    <ol class="days">
+      <li><span class="d">SÁB 18</span><span class="t">Llegada a Baleal y cena de bienvenida</span></li>
+      <li><span class="d">DOM 19</span><span class="t">Surf · respiración y apnea en tierra</span></li>
+      <li><span class="d">LUN 20</span><span class="t">Surf · SUP yoga en la Lagoa de Óbidos</span></li>
+      <li><span class="d">MAR 21</span><span class="t">Surf filmado · videoanálisis · ceremonia de cacao y sound healing al atardecer</span></li>
+      <li><span class="d">MIÉ 22</span><span class="t">Barco a las islas Berlengas, con apnea en el agua · pueblo amurallado de Óbidos</span></li>
+      <li><span class="d">JUE 23</span><span class="t">Surf · yoga</span></li>
+      <li><span class="d">VIE 24</span><span class="t">Surf filmado · videoanálisis · cena de despedida</span></li>
+      <li><span class="d">SÁB 25</span><span class="t">Desayuno y salida</span></li>
+    </ol>
+    <p class="note">El orden se ajusta a las olas y al mar de cada día.</p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="incluye">
+  <div class="inner">
+    <h2 id="incluye">Qué incluye</h2>
+    <ul class="inc">
+      <li>7 noches a pasos de la playa de surf</li>
+      <li>Todas las comidas, con chef</li>
+      <li>5 clases de surf con tabla y traje</li>
+      <li>2 sesiones filmadas por Salty Surf Eyes con videoanálisis</li>
+      <li>Respiración y apnea, en tierra y en el agua</li>
+      <li>SUP yoga, yoga, cacao y sound healing</li>
+      <li>Barco a las Berlengas</li>
+      <li>Traslados durante la semana</li>
+      <li>Kit de bienvenida y remera de SUP Aventura</li>
+      <li>Fotos y videos de toda la experiencia</li>
+    </ul>
+    <p class="not">No incluye vuelos, traslado desde Lisboa ni seguro de viaje. Te ayudamos a organizar cómo llegar.</p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="precio">
+  <div class="inner">
+    <h2 id="precio">Precio</h2>
+    <div class="price">
+      <div><div class="amt">€1.090</div><div class="lbl">las primeras 4</div></div>
+      <div><div class="amt">€1.290</div><div class="lbl">después</div></div>
+      <p>Se reserva con una seña y el resto se paga en cuotas. Si surge una emergencia, te queda un crédito para otra experiencia de SUP Aventura.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="preguntas">
+  <div class="inner">
+    <h2 id="preguntas">Preguntas</h2>
+    <details><summary>¿Puedo ir sola?</summary><p>Sí. La mayoría viene sola y el grupo se arma desde la cena de bienvenida.</p></details>
+    <details><summary>Nunca surfeé, ¿puedo ir?</summary><p>Sí, el viaje está pensado para empezar de cero. Las clases son por nivel y la respiración te ayuda a sentirte segura en el agua.</p></details>
+    <details><summary>¿El agua está fría?</summary><p>En septiembre el mar está en su punto más templado del año, alrededor de 20 °C. Surfeamos con traje de neoprene, que está incluido.</p></details>
+    <details><summary>¿Cómo llego desde Lisboa?</summary><p>Baleal queda a una hora del aeropuerto de Lisboa. Hay buses a Peniche y podemos organizar un traslado en grupo. Te ayudamos a armarlo.</p></details>
+    <details><summary>¿Cómo se paga?</summary><p>Con una seña reservás tu lugar y el resto lo pagás en cuotas antes del viaje.</p></details>
+  </div>
+</section>
+
+<section class="band end" aria-labelledby="final">
+  <div class="inner">
+    <h2 id="final">¿Te sumás?</h2>
+    <p>Los lugares son pocos y las primeras 4 tienen precio early. Escribime y te aviso apenas abramos.</p>
+    <a class="cta" href="https://wa.me/50683941825?text=Hola%20Juli!%20PORTUGAL%20%F0%9F%8C%8A%20Quiero%20enterarme%20primero%20del%20viaje%20de%20surf%20y%20apnea%20(18%20al%2025%20de%20septiembre%202027)." target="_blank" rel="noopener">Escribime PORTUGAL</a>
+  </div>
+</section>
+
+<footer class="band"><a href="/">supaventura.com</a> · <a href="https://www.instagram.com/supaventura/" target="_blank" rel="noopener">@supaventura</a></footer>
+
+</body>
+</html>
