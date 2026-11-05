@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>SUP Aventura · Viajes</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Viajes y aventuras de agua de SUP Aventura: SUP en el Delta y Punta del Este, surf en Costa Rica, kite en Portugal." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+<style>
+/* Layout: una columna angosta tipo link-in-bio; los viajes en orden de fecha, cada uno con su deporte. */
+:root {
+  --bg: #faf6f0;
+  --card: #f0e6d3;
+  --fg: #3d2b1f;
+  --muted: #6b5546;
+  --accent: #e8804a;
+  --accent-fg: #1e1410;
+  --ocean: #5b8fa8;
+  --ocean-fg: #faf6f0;
+  --line: #e2d5c1;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --mono: 'Space Mono', ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1e1612; --card: #2b201a; --fg: #f0e6d3; --muted: #c4b19d;
+    --accent: #f2a978; --accent-fg: #1e1410; --ocean: #3f6e85; --ocean-fg: #faf6f0; --line: #3d2f26;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1e1612; --card: #2b201a; --fg: #f0e6d3; --muted: #c4b19d;
+  --accent: #f2a978; --accent-fg: #1e1410; --ocean: #3f6e85; --ocean-fg: #faf6f0; --line: #3d2f26;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--sans); line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 480px; margin: 0 auto; padding-block: 40px 56px; display: flex; flex-direction: column; gap: 32px; }
+
+header { text-align: center; display: flex; flex-direction: column; gap: 6px; }
+.brand { font-family: var(--serif); font-weight: 600; font-size: 2.4rem; line-height: 1; letter-spacing: 0.01em; }
+.by { font-size: 0.9rem; color: var(--muted); }
+.tagline { font-family: var(--serif); font-style: italic; font-size: 1.35rem; margin-top: 8px; text-wrap: balance; }
+.sports { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+
+.label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+section { display: flex; flex-direction: column; gap: 14px; }
+
+.trip { display: grid; grid-template-columns: 112px 1fr; background: var(--card); border-radius: 14px; overflow: hidden; min-height: 128px; transition: transform .2s ease; }
+.trip:hover { transform: translateY(-2px); }
+.trip img, .trip .ph { width: 112px; height: 100%; min-height: 128px; object-fit: cover; }
+.ph { background: var(--ocean); color: var(--ocean-fg); display: grid; place-items: center; font-family: var(--serif); font-style: italic; font-size: 1.7rem; }
+.info { padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.when { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.place { font-family: var(--serif); font-weight: 600; font-size: 1.5rem; line-height: 1.1; }
+.sport { font-size: 0.9rem; }
+.cta { margin-top: auto; padding-top: 6px; font-size: 0.85rem; font-weight: 500; color: var(--fg); }
+.cta::after { content: " →"; }
+.tag { align-self: flex-start; font-size: 0.72rem; font-weight: 500; padding: 2px 9px; border-radius: 99px; background: var(--accent); color: var(--accent-fg); }
+
+.links { display: flex; flex-direction: column; gap: 10px; }
+.btn { display: block; text-align: center; padding: 14px 18px; border: 1px solid var(--line); border-radius: 99px; font-weight: 500; font-size: 0.95rem; background: var(--bg); transition: background .2s ease; }
+.btn:hover { background: var(--card); }
+.btn.main { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.btn.main:hover { opacity: .9; }
+
+footer { text-align: center; font-size: 0.85rem; color: var(--muted); }
+footer a { text-decoration: underline; text-underline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .trip, .btn { transition: none; } .trip:hover { transform: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">SUP Aventura</div>
+    <div class="by">by <a href="https://www.instagram.com/julikessler/" target="_blank" rel="noopener">@julikessler</a></div>
+    <p class="tagline">Un destino, un deporte. No hace falta experiencia.</p>
+    <div class="sports">SUP · surf · kite · yoga · comunidad</div>
+  </header>
+
+  <section aria-labelledby="viajes">
+    <h2 class="label" id="viajes">Próximos viajes</h2>
+
+    <a class="trip" href="/costa-rica">
+      <img src="assets/img/links/costa-rica.jpg" alt="Dos chicas caminando por la playa de Santa Teresa al atardecer" />
+      <div class="info">
+        <span class="when">5–12 dic 2026</span>
+        <span class="place">Costa Rica</span>
+        <span class="sport">Surf en Santa Teresa · solo mujeres</span>
+        <span class="tag">Últimos lugares</span>
+        <span class="cta">Conocé el viaje</span>
+      </div>
+    </a>
+
+    <a class="trip" href="/punta">
+      <img src="assets/img/links/punta.jpg" alt="Grupo de riders con sus tablas de SUP en la playa de Punta del Este" />
+      <div class="info">
+        <span class="when">8–11 ene 2027</span>
+        <span class="place">Punta del Este</span>
+        <span class="sport">SUP y travesía a la Isla Gorriti</span>
+        <span class="cta">Conocé el viaje</span>
+      </div>
+    </a>
+
+    <a class="trip" href="https://wa.me/50683941825?text=Hola%20Juli!%20PORTUGAL%20%F0%9F%AA%81%20Quiero%20enterarme%20primero%20del%20viaje%20de%20kite%20a%20Portugal%20(septiembre%202027)." target="_blank" rel="noopener">
+      <div class="ph" aria-hidden="true">Kite</div>
+      <div class="info">
+        <span class="when">Septiembre 2027</span>
+        <span class="place">Portugal</span>
+        <span class="sport">Aprendé kite en la Lagoa de Óbidos</span>
+        <span class="tag">Próximamente</span>
+        <span class="cta">Enterate primero</span>
+      </div>
+    </a>
+
+    <a class="trip" href="https://wa.me/50683941825?text=Hola%20Juli!%20Quiero%20sumarme%20a%20las%20salidas%20del%20Delta%20%F0%9F%8C%BF" target="_blank" rel="noopener">
+      <img src="assets/img/links/delta.jpg" alt="Clase de yoga en un quincho del Delta con tablas de SUP en primer plano" />
+      <div class="info">
+        <span class="when">Todo el año</span>
+        <span class="place">Delta</span>
+        <span class="sport">SUP, yoga y salidas en Buenos Aires</span>
+        <span class="cta">Sumate a las salidas</span>
+      </div>
+    </a>
+  </section>
+
+  <section aria-labelledby="mas">
+    <h2 class="label" id="mas">Más</h2>
+    <div class="links">
+      <a class="btn main" href="https://wa.me/50683941825?text=Hola%20Juli!%20Quiero%20info%20de%20los%20viajes%20de%20SUP%20Aventura." target="_blank" rel="noopener">Escribime por WhatsApp</a>
+      <a class="btn" href="https://wa.me/50683941825?text=Hola%20Juli!%20Me%20gustar%C3%ADa%20agendar%20una%20llamada%20para%20charlar%20sobre%20un%20viaje." target="_blank" rel="noopener">Agendá una llamada</a>
+      <a class="btn" href="/#experiences">Experiencias en Santa Teresa</a>
+      <a class="btn" href="/">supaventura.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <a href="https://www.instagram.com/supaventura/" target="_blank" rel="noopener">@supaventura</a>
+  </footer>
+
+</div>
+</body>
+</html>
