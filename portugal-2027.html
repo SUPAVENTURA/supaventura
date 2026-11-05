@@ -94,6 +94,15 @@ details p { margin-top: 8px; color: var(--muted); max-width: 38em; }
 .end h2 { margin: 0; }
 .end p { color: var(--sea-muted); }
 footer { text-align: center; font-size: 0.85rem; color: var(--muted); padding-block: 0 40px; }
+
+.hero-img { width: 100%; max-width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 14px; margin-top: 18px; }
+.team { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.person { background: var(--card); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.person img { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.person .ph-person { aspect-ratio: 4 / 5; background: var(--sea); color: var(--sea-fg); display: grid; place-items: center; font-family: var(--serif); font-style: italic; font-size: 2rem; }
+.person div.txt { padding: 16px; display: flex; flex-direction: column; gap: 4px; }
+.person strong { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; }
+.person span { font-size: 0.92rem; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -104,9 +113,10 @@ footer { text-align: center; font-size: 0.85rem; color: var(--muted); padding-bl
   <div class="inner">
     <span class="kicker">SUP Aventura · Baleal · Peniche, Portugal</span>
     <h1>Aprendé surf <em>sin miedo al mar</em></h1>
-    <p>Una semana de surf, respiración y apnea en una de las mejores playas de Europa para empezar. Con un surfista de olas grandes de Nazaré que te enseña a mantener la calma en el agua.</p>
+    <p>Una semana de surf, respiración y apnea en una de las mejores playas de Europa para empezar. Con un instructor que entrena en Nazaré y te enseña a mantener la calma en el agua.</p>
     <div class="facts"><span>18–25 SEP 2027</span><span>7 NOCHES</span><span>TODO INCLUIDO CON CHEF</span><span>SIN EXPERIENCIA</span></div>
     <a class="cta" href="https://wa.me/50683941825?text=Hola%20Juli!%20PORTUGAL%20%F0%9F%8C%8A%20Quiero%20enterarme%20primero%20del%20viaje%20de%20surf%20y%20apnea%20(18%20al%2025%20de%20septiembre%202027)." target="_blank" rel="noopener">Enterate primero · Escribime PORTUGAL</a>
+    <img class="hero-img" src="assets/img/portugal/ola.jpg" alt="Surfista adentro de un tubo, filmado desde el agua por Salty Surf Eyes" />
   </div>
 </header>
 
@@ -118,6 +128,22 @@ footer { text-align: center; font-size: 0.85rem; color: var(--muted); padding-bl
       <div><strong>Te ves surfear</strong><span>Salty Surf Eyes te filma desde el agua y después vemos el video en grupo para mejorar.</span></div>
       <div><strong>Comer bien todos los días</strong><span>Chef y todas las comidas incluidas, con opciones para dietas especiales.</span></div>
       <div><strong>El sello SUP Aventura</strong><span>SUP yoga en la laguna, ceremonia de cacao, sound healing y una comunidad que se arma desde el primer día.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="quienes">
+  <div class="inner">
+    <h2 id="quienes">Quiénes te acompañan</h2>
+    <div class="team">
+      <div class="person">
+        <div class="ph-person" aria-hidden="true">Juli</div>
+        <div class="txt"><strong>Juli Kessler</strong><span>Creadora de SUP Aventura. Instructora de SUP, yoga y pilates. Vive en Santa Teresa, Costa Rica, y arma viajes y salidas de agua con una comunidad que vuelve cada año.</span></div>
+      </div>
+      <div class="person">
+        <img src="assets/img/portugal/fede-nazare.jpg" alt="Federico Kessler con una tabla de olas grandes en el Centro de Alto Rendimiento de Nazaré" />
+        <div class="txt"><strong>Federico Kessler</strong><span>Instructor de kitesurf, buceo, RCP y primeros auxilios, con 12 años enseñando en el mar y más de mil alumnos. Vive en Portugal y filma surf desde el agua con Salty Surf Eyes.</span></div>
+      </div>
     </div>
   </div>
 </section>
