@@ -1837,3 +1837,12 @@ p { font-size: clamp(0.95rem, 1.5vw, 1.05rem); opacity: 0.85; }
     padding-bottom: 3.5rem;
   }
 }
+
+.exp-more {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--earth);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
